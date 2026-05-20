@@ -1,0 +1,10 @@
+title: "Share your first Copilot app win"
+labels: ["show-and-tell"]
+body:
+  - type: textarea
+    id: win
+    attributes:
+      label: What did you accomplish?
+      description: Share the first useful thing you did with the Copilot app.
+    validations:
+      required: true

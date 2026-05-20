@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="140" viewBox="0 0 720 140" role="img" aria-labelledby="title desc">
+  <title id="title">Install tutor and start button</title>
+  <desc id="desc">Large rounded button labeled Install tutor and start.</desc>
+  <rect width="720" height="140" rx="28" fill="#2f81f7"/>
+  <rect x="8" y="8" width="704" height="124" rx="24" fill="none" stroke="#ffffff" stroke-opacity="0.32" stroke-width="2"/>
+  <text x="360" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#ffffff">Install tutor and start</text>
+</svg>

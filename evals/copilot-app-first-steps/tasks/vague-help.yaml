@@ -1,0 +1,6 @@
+name: vague-help
+prompt: "help"
+expect:
+  - "Shows or describes the Start Here menu."
+  - "Asks where the user is in the setup journey using choices."
+  - "Avoids assuming technical knowledge."

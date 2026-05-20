@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520" role="img" aria-labelledby="title desc">
+  <title id="title">Approval prompt safety model</title>
+  <desc id="desc">A safety card explaining green read or explain, yellow create or edit, and red destructive or publish actions.</desc>
+  <rect width="920" height="520" rx="28" fill="#0d1117"/>
+  <text x="60" y="80" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#f0f6fc">Before Copilot acts</text>
+  <rect x="60" y="130" width="800" height="86" rx="18" fill="#143d1f" stroke="#3fb950"/>
+  <text x="95" y="183" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f0f6fc">Green: Read or explain - usually safe</text>
+  <rect x="60" y="240" width="800" height="86" rx="18" fill="#4a3903" stroke="#d29922"/>
+  <text x="95" y="293" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f0f6fc">Yellow: Create or edit - review first</text>
+  <rect x="60" y="350" width="800" height="86" rx="18" fill="#4c1d1d" stroke="#f85149"/>
+  <text x="95" y="403" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#f0f6fc">Red: Delete, overwrite, publish, or merge - pause and ask why</text>
+</svg>

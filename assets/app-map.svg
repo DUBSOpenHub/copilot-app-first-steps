@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="560" viewBox="0 0 920 560" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified Copilot app map</title>
+  <desc id="desc">A simplified map of the Copilot app showing project list, conversation, prompt box, and approval pop-ups.</desc>
+  <rect width="920" height="560" rx="28" fill="#0d1117"/>
+  <rect x="40" y="40" width="220" height="480" rx="18" fill="#161b22" stroke="#30363d"/>
+  <text x="70" y="88" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#f0f6fc">Left side</text>
+  <text x="70" y="122" font-family="Arial, sans-serif" font-size="18" fill="#8b949e">Projects</text>
+  <text x="70" y="152" font-family="Arial, sans-serif" font-size="18" fill="#8b949e">Sessions</text>
+  <rect x="290" y="40" width="590" height="480" rx="18" fill="#161b22" stroke="#30363d"/>
+  <text x="330" y="88" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#f0f6fc">Center</text>
+  <text x="330" y="122" font-family="Arial, sans-serif" font-size="18" fill="#8b949e">Conversation and work updates</text>
+  <rect x="330" y="160" width="510" height="210" rx="16" fill="#21262d" stroke="#30363d"/>
+  <text x="360" y="210" font-family="Arial, sans-serif" font-size="20" fill="#f0f6fc">Copilot explains, plans, and reports progress here.</text>
+  <rect x="330" y="410" width="510" height="70" rx="16" fill="#0d1117" stroke="#2f81f7" stroke-width="3"/>
+  <text x="360" y="454" font-family="Arial, sans-serif" font-size="20" fill="#f0f6fc">Bottom: where you type your request</text>
+  <rect x="575" y="235" width="230" height="92" rx="14" fill="#2f81f7"/>
+  <text x="600" y="272" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Pop-up</text>
+  <text x="600" y="300" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">Approve, deny, or review</text>
+</svg>

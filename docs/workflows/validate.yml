@@ -1,0 +1,119 @@
+name: Validate Copilot App First Steps
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.x"
+
+      - name: Install YAML parser
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyyaml
+
+      - name: Validate YAML syntax
+        run: |
+          python - <<'PY'
+          import pathlib
+          import yaml
+
+          paths = [
+              pathlib.Path("catalog.yml"),
+              pathlib.Path("skills/copilot-app-first-steps/catalog.yml"),
+              pathlib.Path("evals/copilot-app-first-steps/eval.yaml"),
+          ]
+          paths.extend(pathlib.Path("evals/copilot-app-first-steps/tasks").glob("*.yaml"))
+          for path in paths:
+              with path.open("r", encoding="utf-8") as f:
+                  yaml.safe_load(f)
+          print("YAML valid")
+          PY
+
+      - name: Verify skill copies match
+        run: |
+          cmp SKILL.md skills/copilot-app-first-steps/SKILL.md
+          cmp SKILL.md .github/skills/copilot-app-first-steps/SKILL.md
+          echo "Skill copies match"
+
+      - name: Verify catalog references exist
+        run: |
+          python - <<'PY'
+          import pathlib
+          import sys
+          import yaml
+
+          root = pathlib.Path(".")
+          for catalog_path in [root / "catalog.yml", root / "skills/copilot-app-first-steps/catalog.yml"]:
+              catalog = yaml.safe_load(catalog_path.read_text(encoding="utf-8"))
+              links = catalog.get("links", {}) or {}
+              referenced = [value for value in links.values() if isinstance(value, str)]
+              missing = [p for p in referenced if not root.joinpath(p).exists()]
+              if missing:
+                  print(f"::error file={catalog_path}::catalog references missing files")
+                  for p in missing:
+                      print(f"- {p}")
+                  sys.exit(1)
+          print("Catalog references valid")
+          PY
+
+      - name: Verify HTML parses
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class Parser(HTMLParser):
+              pass
+
+          for path in [Path("install.html"), Path("index.html")]:
+              Parser().feed(path.read_text(encoding="utf-8"))
+          print("HTML parses")
+          PY
+
+      - name: Verify SVG accessibility labels
+        run: |
+          for file in assets/*.svg; do
+            grep -q "<title" "$file"
+            grep -q "<desc" "$file"
+          done
+          echo "SVG labels present"
+
+      - name: Check agent line counts
+        run: |
+          for file in agents/*.agent.md; do
+            lines=$(wc -l < "$file")
+            if [ "$lines" -gt 200 ]; then
+              echo "::error file=$file::Agent prompt exceeds 200 lines ($lines lines)"
+              exit 1
+            fi
+          done
+          echo "Agent prompts within limit"
+
+      - name: Check user-facing guardrails
+        run: |
+          if grep -RInE "curl .+bash|open terminal first|run this terminal command first" \
+            README.md install.html TESTING.md SKILL.md skills/copilot-app-first-steps/SKILL.md .github/skills/copilot-app-first-steps/SKILL.md; then
+            echo "::error::User-facing content leads with terminal-first setup"
+            exit 1
+          fi
+          echo "No terminal-first user-facing content"

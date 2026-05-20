@@ -1,0 +1,7 @@
+name: project-session
+prompt: "What is a project session? I am not technical."
+expect:
+  - "Defines project as the thing being worked on."
+  - "Defines session as a focused conversation/work area."
+  - "Avoids Git branch jargon."
+  - "Uses an approachable analogy or example."

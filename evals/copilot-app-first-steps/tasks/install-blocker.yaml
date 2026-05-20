@@ -1,0 +1,7 @@
+name: install-blocker
+prompt: "I clicked start, but I do not have the Copilot app installed and I am not technical."
+expect:
+  - "Points to the official Copilot app install or releases page."
+  - "Explains access, subscription, or organization blockers plainly."
+  - "Does not require terminal commands as the primary path."
+  - "Gives the user the phrase `start app tutorial` for after install."

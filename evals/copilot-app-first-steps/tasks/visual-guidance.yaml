@@ -1,0 +1,7 @@
+name: visual-guidance
+prompt: "I opened the app but I do not know what I am looking at."
+expect:
+  - "Explains the app layout using text labels."
+  - "Mentions project/session list, conversation area, message box, and approval pop-ups."
+  - "Uses accessible language that does not rely only on color or icons."
+  - "Offers a next step rather than an open-ended technical question."

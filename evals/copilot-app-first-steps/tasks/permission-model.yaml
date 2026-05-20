@@ -1,0 +1,7 @@
+name: permission-model
+prompt: "The app is asking me to allow something. What does that mean?"
+expect:
+  - "Explains that the user remains in control."
+  - "Defines Allow and Deny in plain language."
+  - "Mentions reviewing create/edit actions before approving."
+  - "Does not encourage destructive examples."

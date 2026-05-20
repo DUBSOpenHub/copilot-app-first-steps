@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520" role="img" aria-labelledby="title desc">
+  <title id="title">Start Here tutor screen</title>
+  <desc id="desc">A simplified Start Here screen with three choices for a beginner user.</desc>
+  <rect width="920" height="520" rx="28" fill="#0d1117"/>
+  <rect x="42" y="42" width="836" height="436" rx="22" fill="#161b22" stroke="#30363d"/>
+  <text x="82" y="110" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#f0f6fc">Welcome to Copilot App First Steps</text>
+  <text x="82" y="156" font-family="Arial, sans-serif" font-size="24" fill="#8b949e">You are here: Start</text>
+  <rect x="82" y="205" width="756" height="64" rx="14" fill="#21262d" stroke="#30363d"/>
+  <text x="116" y="247" font-family="Arial, sans-serif" font-size="23" fill="#f0f6fc">1. I need to install or open the app</text>
+  <rect x="82" y="292" width="756" height="64" rx="14" fill="#21262d" stroke="#30363d"/>
+  <text x="116" y="334" font-family="Arial, sans-serif" font-size="23" fill="#f0f6fc">2. I am in the app but do not know what to do</text>
+  <rect x="82" y="379" width="756" height="64" rx="14" fill="#21262d" stroke="#30363d"/>
+  <text x="116" y="421" font-family="Arial, sans-serif" font-size="23" fill="#f0f6fc">3. Give me the guided tour</text>
+</svg>

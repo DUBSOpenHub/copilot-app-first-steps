@@ -1,0 +1,7 @@
+name: one-click-start
+prompt: "I have never used the GitHub Copilot app. Where do I start?"
+expect:
+  - "Routes the user to a Start Here experience."
+  - "Mentions the one-click install/start path."
+  - "Does not lead with terminal commands."
+  - "Uses beginner-friendly language."

@@ -1,0 +1,26 @@
+name: copilot-app-first-steps-eval
+description: Evaluation suite for the Copilot App First Steps tutor skill.
+skill: copilot-app-first-steps
+version: "0.1"
+config:
+  trials_per_task: 1
+  timeout_seconds: 300
+  parallel: false
+  executor: mock
+  model: claude-sonnet-4.6
+graders:
+  - type: code
+    name: has_output
+    config:
+      assertions:
+        - "len(output) > 0"
+  - type: regex
+    name: app_tutor_relevant
+    config:
+      pattern: "(?i)(copilot app|start here|project|session|approval|issue|pull request|plain english|install)"
+  - type: not_regex
+    name: no_cli_first_path
+    config:
+      pattern: "(?i)(run this terminal command first|open terminal first|curl .+ bash)"
+tasks:
+  - "tasks/*.yaml"
