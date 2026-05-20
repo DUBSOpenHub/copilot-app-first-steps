@@ -20,7 +20,7 @@ Copilot App First Steps is a conversational tutor skill. Testing is done with co
 
 | Step | User action | Expected behavior |
 | --- | --- | --- |
-| 1 | Open README | The first visible action is **Install tutor and start**. |
+| 1 | Open README | The first visible action is **Start guided setup**. |
 | 2 | Click install button | Landing page copies `start app tutorial` or shows it clearly. |
 | 3 | Open Copilot app | User has one phrase to paste: `start app tutorial`. |
 | 4 | Start tutor | Skill shows Start Here menu with three choices. |
@@ -30,8 +30,8 @@ Copilot App First Steps is a conversational tutor skill. Testing is done with co
 | Step | User action | Expected behavior |
 | --- | --- | --- |
 | 1 | Visit `https://dubsopenhub.github.io/copilot-app-first-steps/` | User sees a full landing page with hero, audience, guided path, visuals, safety, FAQ, and CTA. |
-| 2 | Click **Install tutor and start** | User lands on `install.html`. |
-| 3 | Click **View the repo** | User lands on the GitHub repository. |
+| 2 | Click **Start guided setup (5 min)** | User lands on `install.html`. |
+| 3 | Click **See what you'll make first** | User jumps to the guided tour preview. |
 
 ## Playbook 2: One-click entry, app not installed
 

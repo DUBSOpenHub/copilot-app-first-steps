@@ -31,7 +31,7 @@ Everyone can become a developer by learning to turn ideas into useful things.
 The first visible action should be:
 
 ```text
-Install tutor and start
+Start guided setup
 ```
 
 If the app can support a deep link later, wire it into `install.html`. Until then, the landing page uses the official app download/release page and gives the user the phrase:

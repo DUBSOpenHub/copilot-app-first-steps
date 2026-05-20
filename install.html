@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Install Copilot App First Steps</title>
+  <meta name="description" content="Copy one starter phrase, open the GitHub Copilot app, and begin the Copilot App First Steps tutorial.">
+  <title>Start Copilot App First Steps</title>
   <style>
     :root {
       color-scheme: light dark;
       --bg: #0d1117;
       --panel: #161b22;
       --text: #f0f6fc;
-      --muted: #8b949e;
+      --muted: #b1bac4;
       --accent: #8534f3;
       --accent-strong: #43179e;
       --warm: #f08a3a;
@@ -115,6 +116,10 @@
       color: var(--text);
       font-weight: 700;
     }
+    :focus-visible {
+      outline: 3px solid var(--warm);
+      outline-offset: 3px;
+    }
     .status {
       min-height: 1.5rem;
       color: var(--ok);
@@ -127,44 +132,39 @@
     <div class="eyebrow">Start here</div>
     <h1>Create something useful with the Copilot app.</h1>
     <p>
-      One button starts the simplest available path. It copies the phrase you need,
-      then opens the official Copilot app install page. After the app opens, paste
-      the phrase and the tutor helps you turn an idea into a plan, summary,
-      checklist, or first workflow.
+      This guided setup copies one starter phrase, then opens the Copilot app download
+      page. After the app opens, paste the phrase and the tutor helps you turn an idea
+      into a plan, summary, checklist, or first workflow.
     </p>
 
-    <button id="start-button" type="button">Install tutor and start</button>
+    <button id="start-button" type="button">Copy start phrase and open app</button>
     <div class="status" id="status" role="status" aria-live="polite"></div>
 
     <ul class="steps" aria-label="What happens next">
       <li><strong>Step 1:</strong> The phrase <code>start app tutorial</code> is copied for you.</li>
-      <li><strong>Step 2:</strong> You go to the official Copilot app install page.</li>
+      <li><strong>Step 2:</strong> You go to the Copilot app download page.</li>
       <li><strong>Step 3:</strong> In the app, paste <code>start app tutorial</code> and the tutor begins.</li>
     </ul>
 
-    <a class="secondary" href="https://github.com/github/app/releases">I just need the official app download</a>
+    <a class="secondary" href="https://github.com/features/copilot">Learn about GitHub Copilot first</a>
 
     <details>
       <summary>Having trouble?</summary>
       <p>
         If you already have the app, open it and paste <code>start app tutorial</code>.
-        If you do not have the app, use the official download page that opens after
-        you click the button.
+        If you do not have the app, use the download page that opens after you click
+        the button.
       </p>
       <p>
         If you see a login or access message, your account may need Copilot app
         preview access or organization approval.
-      </p>
-      <p>
-        Technical helper note: the app does not currently document a universal
-        one-click skill install URL. When one exists, update
-        <code>COPILOT_APP_SKILL_INSTALL_URL</code> in this file.
       </p>
     </details>
   </main>
 
   <script>
     const COPILOT_APP_SKILL_INSTALL_URL = "";
+    // When GitHub documents a universal skill deep link, set COPILOT_APP_SKILL_INSTALL_URL.
     const COPILOT_APP_DOWNLOAD_URL = "https://github.com/github/app/releases";
     const START_PROMPT = "start app tutorial";
 

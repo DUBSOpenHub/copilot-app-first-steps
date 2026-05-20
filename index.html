@@ -4,7 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A beginner-friendly interactive tutor for the GitHub Copilot app. Learn what you can create, why it matters, and how everyone can become a developer.">
-  <title>Copilot App First Steps</title>
+  <meta property="og:title" content="Copilot App First Steps">
+  <meta property="og:description" content="A beginner-friendly first tutorial for the GitHub Copilot app. No Git, terminal, or coding knowledge required.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dubsopenhub.github.io/copilot-app-first-steps/">
+  <meta property="og:image" content="https://dubsopenhub.github.io/copilot-app-first-steps/assets/hero.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Copilot App First Steps | Beginner GitHub Copilot App Tutorial</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -12,10 +18,10 @@
       --panel: #161b22;
       --panel-2: #21262d;
       --text: #f0f6fc;
-      --muted: #8b949e;
+      --muted: #b1bac4;
       --border: #30363d;
-      --blue: #2f81f7;
-      --blue-strong: #1f6feb;
+      --blue: #1f6feb;
+      --blue-strong: #0969da;
       --green: #3fb950;
       --purple: #8534f3;
       --purple-soft: #c898fd;
@@ -45,6 +51,27 @@
 
     a {
       color: inherit;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 1rem;
+      z-index: 20;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      background: var(--text);
+      color: var(--bg);
+      font-weight: 800;
+    }
+
+    .skip-link:focus {
+      left: 1rem;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 3px;
     }
 
     .wrap {
@@ -143,6 +170,28 @@
       max-width: 62ch;
     }
 
+    .hero-bullets {
+      display: grid;
+      gap: 0.45rem;
+      margin: 1.25rem 0 0;
+      padding-left: 1.2rem;
+      color: #c9d1d9;
+      line-height: 1.55;
+    }
+
+    .mission {
+      margin: 1.25rem 0 0;
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--text);
+    }
+
+    .microcopy {
+      margin: 0.75rem 0 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
     .actions {
       display: flex;
       flex-wrap: wrap;
@@ -191,6 +240,29 @@
       display: block;
     }
 
+    .quick-start {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-top: 2rem;
+      grid-column: 1 / -1;
+    }
+
+    .quick-start div {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #161b22cc;
+      padding: 1rem;
+      color: #c9d1d9;
+      line-height: 1.5;
+    }
+
+    .quick-start strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+    }
+
     section {
       padding: clamp(3rem, 7vw, 5rem) 0;
     }
@@ -230,6 +302,19 @@
     .card h3 {
       margin: 0 0 0.5rem;
       font-size: 1.2rem;
+    }
+
+    .example-card {
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: linear-gradient(135deg, #8534f322, #f08a3a18), var(--panel);
+      padding: clamp(1.25rem, 4vw, 2rem);
+    }
+
+    .example-card p {
+      color: #c9d1d9;
+      line-height: 1.65;
+      max-width: 78ch;
     }
 
     .number {
@@ -368,12 +453,22 @@
     @media (max-width: 860px) {
       .hero-grid,
       .grid,
+      .quick-start,
       .visuals {
         grid-template-columns: 1fr;
       }
 
+      nav {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 0.75rem 0;
+      }
+
       .nav-links {
-        display: none;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 0.75rem;
       }
 
       .path-step,
@@ -384,9 +479,10 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header>
     <nav class="wrap" aria-label="Main navigation">
-      <a class="brand" href="#top" aria-label="Copilot App First Steps home">
+      <a class="brand" href="#main-content" aria-label="Copilot App First Steps home">
         <span class="mark" aria-hidden="true">C</span>
         <span>Copilot App First Steps</span>
       </a>
@@ -399,25 +495,36 @@
     </nav>
   </header>
 
-  <main id="top">
+  <main id="main-content">
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
           <div class="eyebrow">Start here if you are new</div>
           <h1>Turn ideas into things you can ship.</h1>
           <p class="lede">
-            Copilot App First Steps helps non-technical users understand the value
-            of the GitHub Copilot app by creating something useful right away: a plan,
-            a summary, a status update, an issue breakdown, a PR explanation, or a
-            first project workflow. Everyone can become a developer.
+            The GitHub Copilot app is an AI assistant you can talk to in plain English.
+            Copilot App First Steps helps you create useful work before you learn any
+            developer vocabulary.
           </p>
+          <ul class="hero-bullets">
+            <li>Create your first plan for what to do next.</li>
+            <li>Turn notes into a clear summary.</li>
+            <li>Draft a status update you can send.</li>
+          </ul>
+          <p class="mission">Everyone can become a developer.</p>
           <div class="actions">
-            <a class="button primary" href="install.html">Install tutor and start</a>
-            <a class="button secondary" href="https://github.com/DUBSOpenHub/copilot-app-first-steps">View the repo</a>
+            <a class="button primary" href="install.html">Start guided setup (5 min)</a>
+            <a class="button secondary" href="#tour">See what you'll make first</a>
           </div>
+          <p class="microcopy">No Git, terminal, or coding knowledge required. You need a GitHub account and access to the GitHub Copilot app.</p>
         </div>
         <div class="hero-card" aria-label="Preview of the tutor">
           <img src="assets/hero.svg" alt="Simplified Copilot app window with a Start Here card and install button">
+        </div>
+        <div class="quick-start" aria-label="What happens before your first win">
+          <div><strong>1. Open the setup</strong>Copy one starter phrase.</div>
+          <div><strong>2. Open Copilot</strong>Paste <code>start app tutorial</code>.</div>
+          <div><strong>3. Make something</strong>Finish with a plan, summary, or update.</div>
         </div>
       </div>
     </section>
@@ -452,6 +559,20 @@
       </div>
     </section>
 
+    <section id="proof">
+      <div class="wrap">
+        <div class="example-card">
+          <div class="eyebrow">First win example</div>
+          <h2>From messy notes to a useful update.</h2>
+          <p>
+            Bring a rough idea like "I need to explain what happened in this project."
+            The tutor helps you ask Copilot for a short summary, a next-step checklist,
+            and a status update you can copy into Slack, Teams, or email.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section id="path">
       <div class="wrap">
         <div class="section-title">
@@ -470,11 +591,11 @@
     <section id="tour">
       <div class="wrap">
         <div class="section-title">
-          <h2>Designed with Copilot brand guidance.</h2>
+          <h2>See what you'll build in your first session.</h2>
           <p>
-            The design follows GitHub's Copilot brand direction: mostly neutral
-            GitHub surfaces, Copilot purple and orange accents, clear product context,
-            and no deprecated standalone Copilot logo hero.
+            The guided tour starts with a simple Start Here card, then shows the parts
+            of the app that matter for a first win: projects, conversation, the prompt
+            box, and approval pop-ups.
           </p>
         </div>
         <div class="visuals">
@@ -484,10 +605,10 @@
         <div class="brand-asset">
           <img src="assets/brand/github-copilot-product-lockup.png" alt="Official GitHub Copilot product lockup examples from the GitHub Brand Toolkit">
           <p>
-            Brand reference: this page uses the official GitHub Copilot palette and
-            product context guidance from the GitHub Brand Toolkit. The lockup image
-            above is included unmodified as a reference and is not used as this
-            project's logo.
+            Trust note: the visual style follows GitHub Copilot brand guidance so the
+            page feels familiar, while keeping the focus on what beginners can create.
+            The lockup image is included unmodified as a reference and is not used as
+            this project's logo.
           </p>
         </div>
       </div>
@@ -542,8 +663,8 @@
             your first useful workflow one step at a time.
           </p>
           <div class="actions" style="justify-content: center;">
-            <a class="button primary" href="install.html">Install tutor and start</a>
-            <a class="button secondary" href="https://github.com/DUBSOpenHub/copilot-app-first-steps/blob/main/docs/QA_REVIEW.md">Read the QA review</a>
+            <a class="button primary" href="install.html">Start guided setup (5 min)</a>
+            <a class="button secondary" href="#safety">Learn the safety model</a>
           </div>
         </div>
       </div>

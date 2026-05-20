@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="520" viewBox="0 0 1280 520" role="img" aria-labelledby="title desc">
   <title id="title">Copilot App First Steps hero</title>
-  <desc id="desc">A GitHub Copilot brand-guided hero graphic for Copilot App First Steps showing a simplified app window, creation outcomes, and the phrase Turn ideas into things you can ship.</desc>
+  <desc id="desc">A GitHub Copilot brand-guided hero graphic for Copilot App First Steps showing a simplified app window, creation outcomes, and a guided setup button.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0d1117"/>
@@ -58,7 +58,7 @@
     <text x="0" y="250" font-family="Arial, sans-serif" font-size="20" fill="#8b949e">Everyone can become a developer.</text>
 
     <rect x="0" y="292" width="315" height="62" rx="18" fill="url(#accent)"/>
-    <text x="34" y="332" font-family="Arial, sans-serif" font-size="22" font-weight="800" fill="#ffffff">Install tutor and start</text>
+    <text x="24" y="332" font-family="Arial, sans-serif" font-size="20" font-weight="800" fill="#ffffff">Start guided setup</text>
 
     <rect x="0" y="382" width="420" height="1" fill="#30363d"/>
     <text x="0" y="420" font-family="Arial, sans-serif" font-size="17" fill="#c9d1d9">No terminal commands in the main path</text>

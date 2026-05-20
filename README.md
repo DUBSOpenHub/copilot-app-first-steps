@@ -19,7 +19,7 @@ If you are brand new, use the button below.
 
 <p>
   <a href="https://dubsopenhub.github.io/copilot-app-first-steps/install.html">
-    <img src="assets/install-button.svg" alt="Install tutor and start" width="360">
+    <img src="assets/install-button.svg" alt="Start guided setup" width="360">
   </a>
 </p>
 
