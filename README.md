@@ -218,6 +218,4 @@ This package does not invent an unsupported Copilot app URL scheme. `install.htm
 
 This tutor was designed from the patterns used across DUBSOpenHub Copilot skill repos, with special attention to non-technical onboarding, visual guidance, one-click entry, security posture, and beginner-safe permission education.
 
-## Built by
-
-Created with care by [@DUBSOpenHub](https://github.com/DUBSOpenHub) with GitHub Copilot CLI.
+🐙 Created with 💜 by [@DUBSOpenHub](https://github.com/DUBSOpenHub) with the GitHub Copilot CLI.
