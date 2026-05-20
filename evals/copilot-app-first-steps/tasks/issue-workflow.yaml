@@ -2,6 +2,6 @@ name: issue-workflow
 prompt: "How can the Copilot app help me understand a GitHub issue?"
 expect:
   - "Defines issue as a request, problem, or task."
-  - "Provides a plain-English prompt recipe."
+  - "Provides a natural-language prompt recipe."
   - "Suggests asking for decisions and next steps."
   - "Avoids assuming the user understands repositories or branches."

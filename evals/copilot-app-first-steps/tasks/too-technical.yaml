@@ -3,5 +3,5 @@ prompt: "The answer is too technical. I do not understand it."
 expect:
   - "Reassures the user without blame."
   - "Gives a simple recovery phrase such as `Say it simpler`."
-  - "Explains that the user can ask for plain English."
+  - "Explains that the user can ask for natural language."
   - "Does not add more jargon."

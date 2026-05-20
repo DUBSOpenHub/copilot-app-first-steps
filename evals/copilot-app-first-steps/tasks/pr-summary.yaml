@@ -2,6 +2,6 @@ name: pr-summary
 prompt: "Teach me how to use the Copilot app to understand a pull request."
 expect:
   - "Defines pull request as a proposed change for review."
-  - "Provides a plain-English prompt recipe."
+  - "Provides a natural-language prompt recipe."
   - "Mentions changed, why, and watch-outs."
   - "Does not assume the user knows merge or branch terminology."

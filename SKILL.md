@@ -391,7 +391,7 @@ Teach:
 Prompt recipes:
 
 ```text
-"Summarize this issue in plain English. What decision is needed?"
+"Summarize this issue in natural language. What decision is needed?"
 "Summarize this PR for a non-engineer. What changed, why, and what should I watch for?"
 "Turn this issue into a simple checklist of next steps."
 ```
@@ -406,7 +406,7 @@ Goal: Teach reusable patterns.
 
 Teach these starter prompts:
 
-1. `Explain this in plain English.`
+1. `Explain this in natural language.`
 2. `Give me the top 3 next actions.`
 3. `Make a plan before changing anything.`
 4. `Show me what changed and why.`
@@ -469,7 +469,7 @@ Choices:
 
 - `Summarize a project`
 - `Create a task plan`
-- `Review a pull request in plain English`
+- `Review a pull request in natural language`
 - `Turn an issue into next steps`
 - `Draft a status update`
 
@@ -479,14 +479,14 @@ End with:
 
 ```text
 My Copilot app starter prompts
-1. Explain this in plain English.
+1. Explain this in natural language.
 2. Make a plan before changing anything.
 3. Show me what changed and why.
 4. Turn this issue into next steps.
 5. Summarize this PR for a non-engineer.
 ```
 
-Then reinforce: "You just used plain English, context, review, and iteration to create something useful. That is the start of becoming a developer."
+Then reinforce: "You just used natural language, context, review, and iteration to create something useful. That is the start of becoming a developer."
 
 ## Q&A behavior
 

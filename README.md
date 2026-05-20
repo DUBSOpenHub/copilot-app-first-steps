@@ -49,7 +49,7 @@ Good fits:
 
 By the end, you will be able to create:
 
-1. A plain-English project summary.
+1. A natural-language project summary.
 2. A checklist from a GitHub issue.
 3. A non-technical pull request explanation.
 4. A project plan before anything changes.
