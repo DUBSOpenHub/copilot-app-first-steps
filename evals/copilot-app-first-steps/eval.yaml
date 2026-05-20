@@ -17,7 +17,11 @@ graders:
   - type: regex
     name: app_tutor_relevant
     config:
-      pattern: "(?i)(copilot app|start here|project|session|approval|issue|pull request|natural language|install)"
+      pattern: "(?i)(copilot app|start here|project|session|approval|issue|pull request|natural language|install|build|builder|tiny win)"
+  - type: regex
+    name: colorful_creator_style
+    config:
+      pattern: "(🎯|✨|🪄|🛡️|🎉|📍|Builder card|Tiny win|Open\\. Ask\\. Build|Build the thing)"
   - type: not_regex
     name: no_cli_first_path
     config:

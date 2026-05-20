@@ -54,7 +54,7 @@ Result: pass with one known operational limitation.
 - Raw brand guideline sheets and product lockup references are not shown in learner-facing pages.
 - Agent prompt is under 200 lines.
 - User-facing content does not lead with terminal setup.
-- Eval task count is 11.
+- Eval task count is 12.
 
 ### Discovery landing page
 
@@ -77,6 +77,10 @@ Updated the README, landing page, skill instructions, and agent guidance to focu
 Updated the visual direction to follow the public GitHub Copilot Brand Toolkit: dark GitHub surfaces, GitHub blue primary actions, Copilot purple accents, product context, and no deprecated standalone Copilot logo hero.
 
 Brand guidance stays in documentation; raw guideline sheets and product lockup examples are not embedded in the learner-facing experience.
+
+### Updated: colorful tutor engagement
+
+Updated the skill instructions to match the published landing-page positioning: "Build the thing you have been waiting for," "Open. Ask. Build.," and "Real things. Today. By you." The tutor now uses emoji-labeled Builder cards, progress maps, prompt recipe cards, tiny wins, safety cards, and celebration moments while keeping text labels accessible.
 
 ### Remote repo
 

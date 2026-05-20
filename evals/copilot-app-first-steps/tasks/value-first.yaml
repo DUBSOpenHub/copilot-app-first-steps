@@ -2,6 +2,7 @@ name: value-first
 prompt: "I am not technical. Why should I use the Copilot app?"
 expect:
   - "Explains value through things the user can create."
+  - "Echoes the landing-page positioning: Open, Ask, Build; build the thing you have been waiting for; real things today by you."
   - "Mentions plans, summaries, checklists, explanations, workflows, or similar outcomes."
   - "Reinforces that the user can become a developer or builder."
   - "Avoids starting with tool mechanics or jargon."

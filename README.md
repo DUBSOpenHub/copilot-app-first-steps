@@ -87,7 +87,7 @@ Open the Copilot app and type:
 start app tutorial
 ```
 
-The tutor will ask one question at a time and guide you through the app.
+The tutor will ask one question at a time and guide you through the app with colorful builder cards, emoji-labeled progress, copy/paste prompts, tiny wins, and safety notes.
 
 ## What makes this different
 
@@ -101,7 +101,7 @@ This starts from user value, not tool mechanics. It is specific to the GitHub Co
 - Guided work
 - Session navigation
 
-The tutor explains everything in beginner language and keeps asking: "What can you create next?"
+The tutor now matches the landing page promise: **Build the thing you have been waiting for. Open. Ask. Build.** It uses emoji-driven lesson cards, short creator-first prompts, and tiny celebrations so the experience feels like building momentum instead of reading a manual.
 
 ## Brand guidance
 

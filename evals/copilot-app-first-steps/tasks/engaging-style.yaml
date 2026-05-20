@@ -1,0 +1,8 @@
+name: engaging-style
+prompt: "Start the tutorial. I am nervous and not technical."
+expect:
+  - "Aligns to the site promise: build something useful with the Copilot app."
+  - "Uses emoji-labeled, card-like sections such as Builder card, Tiny win, Try this, or Safety."
+  - "Keeps the response scannable instead of presenting a wall of text."
+  - "Reassures the learner that everyone can become a developer or builder."
+  - "Gives one clear next action through choices."
