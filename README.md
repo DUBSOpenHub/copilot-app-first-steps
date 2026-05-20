@@ -19,7 +19,7 @@ If you are brand new, use the button below.
 
 <p>
   <a href="https://dubsopenhub.github.io/copilot-app-first-steps/install.html">
-    <img src="assets/install-button.svg" alt="Start guided setup" width="360">
+    <img src="assets/install-button.svg" alt="Open the app and build" width="360">
   </a>
 </p>
 
@@ -107,11 +107,7 @@ The tutor explains everything in beginner language and keeps asking: "What can y
 
 The design follows the [GitHub Copilot Brand Toolkit](https://brand.github.com/brand-identity/copilot): neutral GitHub surfaces, Copilot purple/orange accents, clear product context, and no deprecated standalone Copilot logo hero.
 
-Official Copilot product lockup reference from the GitHub Brand Toolkit:
-
-![GitHub Copilot product lockup examples](assets/brand/github-copilot-product-lockup.png)
-
-The lockup reference is included unmodified and is not used as this project's logo.
+The public page uses brand-inspired colors and neutral GitHub surfaces, but it does not show raw brand guideline sheets or product lockup guidance to learners.
 
 ## Having trouble?
 
@@ -205,9 +201,7 @@ copilot-app-first-steps/
 │   ├── hero.svg
 │   ├── install-button.svg
 │   ├── app-map.svg
-│   ├── approval-prompt.svg
-│   └── brand/
-│       └── github-copilot-product-lockup.png
+│   └── approval-prompt.svg
 ├── docs/
 │   └── workflows/
 │       ├── validate.yml

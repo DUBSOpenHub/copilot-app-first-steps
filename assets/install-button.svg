@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="140" viewBox="0 0 720 140" role="img" aria-labelledby="title desc">
-  <title id="title">Start guided setup button</title>
-  <desc id="desc">Large rounded button labeled Start guided setup.</desc>
-  <rect width="720" height="140" rx="28" fill="#1f6feb"/>
+  <title id="title">Open the app and build button</title>
+  <desc id="desc">Large rounded button labeled Open the app and build.</desc>
+  <rect width="720" height="140" rx="28" fill="#6e3aff"/>
   <rect x="8" y="8" width="704" height="124" rx="24" fill="none" stroke="#ffffff" stroke-opacity="0.32" stroke-width="2"/>
-  <text x="360" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff">Start guided setup</text>
+  <text x="360" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="700" fill="#ffffff">Open the app and build</text>
 </svg>

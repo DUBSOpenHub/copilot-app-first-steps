@@ -2,11 +2,7 @@
 
 This project follows the public [GitHub Copilot Brand Toolkit](https://brand.github.com/brand-identity/copilot).
 
-Official asset used:
-
-- `assets/brand/github-copilot-product-lockup.png`
-- Source: `https://brand.github.com/_next/static/media/copilot-01.0e1505e6.png`
-- Usage: included unmodified as a product-lockup reference, not as the project logo.
+No raw brand guideline sheets or product lockup reference images are shown in the learner-facing page. Brand guidance is applied through color, spacing, neutral surfaces, and clear product context.
 
 ## Applied guidance
 
@@ -32,4 +28,4 @@ The page is designed from the learner's perspective:
 
 - `index.html` uses the official Copilot palette values.
 - `assets/hero.svg` uses neutral surfaces plus Copilot purple/orange accents.
-- The README includes the official Copilot product lockup reference unmodified and avoids using a GitHub logo as the project logo.
+- The README and landing page avoid embedding brand guideline sheets or product lockup references as user-facing content.

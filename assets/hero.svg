@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="520" viewBox="0 0 1280 520" role="img" aria-labelledby="title desc">
   <title id="title">Copilot App First Steps hero</title>
-  <desc id="desc">A GitHub Copilot brand-guided hero graphic for Copilot App First Steps showing a simplified app window, creation outcomes, and a guided setup button.</desc>
+  <desc id="desc">A warm hero graphic for Copilot App First Steps showing a plain-English Copilot conversation that turns project notes into a useful team update.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0d1117"/>
-      <stop offset="0.55" stop-color="#161b22"/>
-      <stop offset="1" stop-color="#8534F3"/>
+      <stop offset="0" stop-color="#FBF8F3"/>
+      <stop offset="0.62" stop-color="#F4EFE8"/>
+      <stop offset="1" stop-color="#E8DDFF"/>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#8534F3"/>
@@ -17,50 +17,50 @@
   </defs>
 
   <rect width="1280" height="520" rx="36" fill="url(#bg)"/>
-  <circle cx="1050" cy="80" r="220" fill="#8534F3" opacity="0.20"/>
-  <circle cx="1180" cy="420" r="180" fill="#F08A3A" opacity="0.18"/>
-  <circle cx="140" cy="440" r="190" fill="#2da44e" opacity="0.08"/>
+  <circle cx="1050" cy="80" r="220" fill="#8534F3" opacity="0.13"/>
+  <circle cx="1180" cy="420" r="180" fill="#F08A3A" opacity="0.16"/>
+  <circle cx="140" cy="440" r="190" fill="#0f766e" opacity="0.08"/>
 
   <g transform="translate(70 74)">
-    <rect width="550" height="372" rx="28" fill="#0d1117" stroke="#30363d" filter="url(#shadow)"/>
-    <rect x="0" y="0" width="550" height="58" rx="28" fill="#161b22"/>
+    <rect width="550" height="372" rx="28" fill="#111827" stroke="#e4ddd4" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="550" height="58" rx="28" fill="#1f2937"/>
     <circle cx="34" cy="29" r="7" fill="#f85149"/>
     <circle cx="58" cy="29" r="7" fill="#d29922"/>
     <circle cx="82" cy="29" r="7" fill="#3fb950"/>
 
-    <rect x="26" y="84" width="142" height="248" rx="18" fill="#161b22" stroke="#30363d"/>
+    <rect x="26" y="84" width="142" height="248" rx="18" fill="#1f2937" stroke="#374151"/>
     <text x="46" y="120" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#f0f6fc">Projects</text>
-    <rect x="46" y="146" width="92" height="12" rx="6" fill="#8b949e" opacity="0.55"/>
-    <rect x="46" y="174" width="108" height="12" rx="6" fill="#8b949e" opacity="0.35"/>
-    <rect x="46" y="202" width="76" height="12" rx="6" fill="#8b949e" opacity="0.35"/>
+    <rect x="46" y="146" width="92" height="12" rx="6" fill="#d1d5db" opacity="0.55"/>
+    <rect x="46" y="174" width="108" height="12" rx="6" fill="#d1d5db" opacity="0.35"/>
+    <rect x="46" y="202" width="76" height="12" rx="6" fill="#d1d5db" opacity="0.35"/>
     <rect x="46" y="252" width="100" height="38" rx="12" fill="#8534F3" opacity="0.32"/>
     <text x="60" y="277" font-family="Arial, sans-serif" font-size="13" fill="#f0f6fc">Create</text>
 
-    <rect x="194" y="84" width="330" height="248" rx="18" fill="#161b22" stroke="#30363d"/>
-    <rect x="222" y="112" width="186" height="34" rx="17" fill="#21262d"/>
-    <text x="242" y="135" font-family="Arial, sans-serif" font-size="15" fill="#f0f6fc">What do you want to create?</text>
-    <rect x="222" y="168" width="250" height="50" rx="16" fill="#0d1117" stroke="#30363d"/>
-    <text x="242" y="199" font-family="Arial, sans-serif" font-size="15" fill="#f0f6fc">Turn an idea into a plan</text>
-    <rect x="222" y="236" width="272" height="50" rx="16" fill="#0d1117" stroke="#30363d"/>
-    <text x="242" y="267" font-family="Arial, sans-serif" font-size="15" fill="#f0f6fc">Summarize a project or PR</text>
+    <rect x="194" y="84" width="330" height="248" rx="18" fill="#1f2937" stroke="#374151"/>
+    <rect x="222" y="112" width="238" height="44" rx="17" fill="#312e81"/>
+    <text x="242" y="140" font-family="Arial, sans-serif" font-size="15" fill="#f0f6fc">Turn my notes into a team update</text>
+    <rect x="222" y="178" width="250" height="50" rx="16" fill="#111827" stroke="#374151"/>
+    <text x="242" y="209" font-family="Arial, sans-serif" font-size="15" fill="#f0f6fc">Summary + next steps</text>
+    <rect x="222" y="246" width="272" height="50" rx="16" fill="#111827" stroke="#374151"/>
+    <text x="242" y="277" font-family="Arial, sans-serif" font-size="15" fill="#f0f6fc">Ready-to-send draft</text>
 
     <rect x="194" y="348" width="330" height="42" rx="18" fill="#010409" stroke="#8534F3"/>
-    <text x="218" y="375" font-family="Arial, sans-serif" font-size="15" fill="#8b949e">Type: start app tutorial</text>
+    <text x="218" y="375" font-family="Arial, sans-serif" font-size="15" fill="#d1d5db">Type: start app tutorial</text>
   </g>
 
   <g transform="translate(690 104)">
-    <rect x="0" y="0" width="132" height="34" rx="17" fill="#0969da" opacity="0.22"/>
-    <text x="22" y="23" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#f0f6fc">Start here</text>
+    <rect x="0" y="0" width="230" height="34" rx="17" fill="#6E3AFF" opacity="0.15"/>
+    <text x="22" y="23" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#4C1D95">5 minutes to your first win</text>
 
-    <text x="0" y="94" font-family="Arial, sans-serif" font-size="58" font-weight="800" fill="#f0f6fc">Turn ideas into</text>
-    <text x="0" y="158" font-family="Arial, sans-serif" font-size="58" font-weight="800" fill="#f0f6fc">things you can ship</text>
-    <text x="0" y="212" font-family="Arial, sans-serif" font-size="24" fill="#c9d1d9">Create plans, summaries, checklists, and workflows.</text>
-    <text x="0" y="250" font-family="Arial, sans-serif" font-size="20" fill="#8b949e">Everyone can become a developer.</text>
+    <text x="0" y="94" font-family="Arial, sans-serif" font-size="56" font-weight="800" fill="#111827">Build the thing</text>
+    <text x="0" y="158" font-family="Arial, sans-serif" font-size="56" font-weight="800" fill="#111827">you have been</text>
+    <text x="0" y="222" font-family="Arial, sans-serif" font-size="56" font-weight="800" fill="#111827">waiting for.</text>
+    <text x="0" y="276" font-family="Arial, sans-serif" font-size="23" fill="#374151">No code editor. No terminal. Just ask.</text>
 
     <rect x="0" y="292" width="315" height="62" rx="18" fill="url(#accent)"/>
-    <text x="24" y="332" font-family="Arial, sans-serif" font-size="20" font-weight="800" fill="#ffffff">Start guided setup</text>
+    <text x="28" y="332" font-family="Arial, sans-serif" font-size="21" font-weight="800" fill="#ffffff">Open the app and build</text>
 
     <rect x="0" y="382" width="420" height="1" fill="#30363d"/>
-    <text x="0" y="420" font-family="Arial, sans-serif" font-size="17" fill="#c9d1d9">No terminal commands in the main path</text>
+    <text x="0" y="420" font-family="Arial, sans-serif" font-size="17" fill="#374151">Everyone can become a developer.</text>
   </g>
 </svg>
