@@ -9,6 +9,7 @@ No raw brand guideline sheets or product lockup reference images are shown in th
 - Use GitHub dark surfaces with strong text contrast.
 - Use GitHub blue for primary actions.
 - Use Copilot purple as the primary Copilot accent.
+- Use shadcn/ui-inspired component shapes: bordered cards, badges, command panels, focus rings, and restrained elevation.
 - Keep GitHub Green usage minimal and functional.
 - Do not hero the deprecated standalone Copilot logo.
 - Do not recreate or modify GitHub logos or product lockups.
@@ -26,6 +27,6 @@ The page is designed from the learner's perspective:
 
 ## Current implementation
 
-- `index.html` uses GitHub dark surfaces, GitHub blue CTAs, and Copilot purple accents.
+- `index.html` uses GitHub dark surfaces, GitHub blue CTAs, Copilot purple accents, and shadcn/ui-inspired static components.
 - `assets/hero.svg` uses the same dark surface and blue/purple accent direction.
 - The README and landing page avoid embedding brand guideline sheets or product lockup references as user-facing content.

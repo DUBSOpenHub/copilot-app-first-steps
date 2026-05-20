@@ -15,21 +15,39 @@
   <style>
     :root {
       color-scheme: dark;
-      --bg: #0d1117;
-      --surface: #161b22;
-      --surface-soft: #21262d;
-      --ink: #f0f6fc;
-      --muted: #8b949e;
-      --line: #30363d;
-      --blue: #2f81f7;
-      --blue-dark: #1f6feb;
-      --purple: #a371f7;
-      --purple-dark: #8957e5;
-      --attention: #d29922;
-      --green: #3fb950;
-      --red: #f85149;
+      --canvas-default: #0d1117;
+      --canvas-inset: #010409;
+      --canvas-subtle: #161b22;
+      --canvas-muted: #21262d;
+      --fg-default: #e6edf3;
+      --fg-muted: #8b949e;
+      --border-default: #30363d;
+      --border-muted: #21262d;
+      --accent-fg: #2f81f7;
+      --accent-emphasis: #1f6feb;
+      --done-fg: #a371f7;
+      --done-emphasis: #8957e5;
+      --success-fg: #3fb950;
+      --attention-fg: #d29922;
+      --danger-fg: #f85149;
+      --fg-on-emphasis: #ffffff;
+      --focus: #58a6ff;
+      --radius: 0.875rem;
+      --bg: var(--canvas-default);
+      --surface: var(--canvas-subtle);
+      --surface-soft: var(--canvas-muted);
+      --ink: var(--fg-default);
+      --muted: var(--fg-muted);
+      --line: var(--border-default);
+      --blue: var(--accent-fg);
+      --blue-dark: var(--accent-emphasis);
+      --purple: var(--done-fg);
+      --purple-dark: var(--done-emphasis);
+      --attention: var(--attention-fg);
+      --green: var(--success-fg);
+      --red: var(--danger-fg);
       --shadow: 0 30px 90px rgba(1, 4, 9, 0.68);
-      --ring: #58a6ff;
+      --ring: var(--focus);
     }
 
     * {
@@ -47,7 +65,7 @@
       background:
         radial-gradient(circle at 8% -4%, rgba(47, 129, 247, 0.32), transparent 31rem),
         radial-gradient(circle at 92% 4%, rgba(163, 113, 247, 0.24), transparent 26rem),
-        linear-gradient(180deg, #0d1117 0%, #010409 100%),
+        linear-gradient(180deg, var(--canvas-default) 0%, var(--canvas-inset) 100%),
         var(--bg);
       color: var(--ink);
       line-height: 1.6;
@@ -62,10 +80,10 @@
       pointer-events: none;
       z-index: -1;
       background:
-        linear-gradient(rgba(240, 246, 252, 0.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(240, 246, 252, 0.025) 1px, transparent 1px);
+        linear-gradient(rgba(230, 237, 243, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(230, 237, 243, 0.025) 1px, transparent 1px);
       background-size: 44px 44px;
-      mask-image: linear-gradient(to bottom, #000 0%, transparent 72%);
+      mask-image: linear-gradient(to bottom, var(--canvas-inset) 0%, transparent 72%);
     }
 
     a {
@@ -80,7 +98,7 @@
       padding: 0.75rem 1rem;
       border-radius: 999px;
       background: var(--ink);
-      color: #fff;
+      color: var(--fg-on-emphasis);
       font-weight: 800;
     }
 
@@ -131,8 +149,8 @@
       border-radius: 14px;
       display: grid;
       place-items: center;
-      color: #fff;
-      background: linear-gradient(135deg, var(--blue), var(--purple));
+      color: var(--fg-on-emphasis);
+      background: linear-gradient(135deg, var(--accent-emphasis), var(--done-emphasis));
       box-shadow: 0 12px 34px rgba(47, 129, 247, 0.34);
       font-weight: 900;
     }
@@ -175,10 +193,10 @@
       align-items: center;
       gap: 0.45rem;
       padding: 0.45rem 0.75rem;
-      border-radius: 999px;
+      border-radius: var(--radius);
       border: 1px solid rgba(88, 166, 255, 0.24);
-      background: rgba(56, 139, 253, 0.12);
-      color: #79c0ff;
+      background: rgba(47, 129, 247, 0.12);
+      color: var(--focus);
       font-size: 0.82rem;
       font-weight: 900;
       letter-spacing: 0.04em;
@@ -233,7 +251,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      border-radius: 999px;
+      border-radius: var(--radius);
       padding: 0.9rem 1.25rem;
       border: 1px solid var(--line);
       text-decoration: none;
@@ -243,16 +261,16 @@
     }
 
     .button.primary {
-      background: linear-gradient(135deg, var(--blue), var(--purple));
-      border-color: rgba(88, 166, 255, 0.55);
-      color: #fff;
+      background: var(--accent-emphasis);
+      border-color: var(--accent-emphasis);
+      color: var(--fg-on-emphasis);
       box-shadow:
         0 18px 42px rgba(47, 129, 247, 0.25),
         0 0 0 1px rgba(255, 255, 255, 0.08) inset;
     }
 
     .button.primary:hover {
-      background: linear-gradient(135deg, var(--blue-dark), var(--purple-dark));
+      background: var(--accent-fg);
       transform: translateY(-1px);
       box-shadow:
         0 22px 54px rgba(47, 129, 247, 0.35),
@@ -276,9 +294,34 @@
       font-size: 0.95rem;
     }
 
+    .prompt-strip {
+      width: min(100%, 34rem);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      align-items: center;
+      margin: 1rem 0 0;
+      padding: 0.55rem;
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius);
+      background: rgba(1, 4, 9, 0.58);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset;
+      color: var(--fg-default);
+      font-size: 0.92rem;
+    }
+
+    .prompt-strip span:first-child {
+      border: 1px solid var(--border-default);
+      border-radius: calc(var(--radius) - 0.25rem);
+      padding: 0.32rem 0.48rem;
+      background: var(--canvas-subtle);
+      color: var(--accent-fg);
+      font-weight: 900;
+    }
+
     .hero-panel {
       border: 1px solid var(--line);
-      border-radius: 34px;
+      border-radius: calc(var(--radius) + 1rem);
       background:
         linear-gradient(180deg, rgba(33, 38, 45, 0.88), rgba(13, 17, 23, 0.94)),
         var(--surface);
@@ -289,28 +332,47 @@
     .app-window {
       overflow: hidden;
       border: 1px solid var(--line);
-      border-radius: 26px;
-      background: #010409;
-      color: #f9fafb;
+      border-radius: calc(var(--radius) + 0.5rem);
+      background: var(--canvas-inset);
+      color: var(--fg-default);
       box-shadow: 0 0 0 1px rgba(88, 166, 255, 0.10), 0 30px 80px rgba(1, 4, 9, 0.65);
     }
 
     .app-bar {
       display: flex;
+      align-items: center;
       gap: 0.45rem;
       padding: 0.9rem 1rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: 1px solid var(--border-default);
     }
 
     .dot {
       width: 11px;
       height: 11px;
       border-radius: 50%;
-      background: #f87171;
+      background: var(--danger-fg);
     }
 
-    .dot:nth-child(2) { background: #fbbf24; }
-    .dot:nth-child(3) { background: #34d399; }
+    .dot:nth-child(2) { background: var(--attention-fg); }
+    .dot:nth-child(3) { background: var(--success-fg); }
+
+    .window-title {
+      margin-left: 0.45rem;
+      color: var(--fg-muted);
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+
+    .window-badge {
+      margin-left: auto;
+      border: 1px solid var(--border-default);
+      border-radius: 999px;
+      padding: 0.2rem 0.5rem;
+      background: var(--canvas-subtle);
+      color: var(--accent-fg);
+      font-size: 0.72rem;
+      font-weight: 900;
+    }
 
     .conversation {
       padding: clamp(1rem, 3vw, 1.6rem);
@@ -319,27 +381,27 @@
     }
 
     .bubble {
-      border-radius: 20px;
+      border-radius: var(--radius);
       padding: 1rem;
       line-height: 1.55;
     }
 
     .bubble.user {
-      background: linear-gradient(135deg, #1f6feb, #8250df);
+      background: linear-gradient(135deg, var(--accent-emphasis), var(--done-emphasis));
       justify-self: end;
       max-width: 88%;
     }
 
     .bubble.copilot {
-      background: #161b22;
+      background: var(--canvas-subtle);
       border: 1px solid var(--line);
     }
 
     .result-card {
       border: 1px solid rgba(88, 166, 255, 0.18);
-      border-radius: 20px;
+      border-radius: var(--radius);
       padding: 1rem;
-      background: linear-gradient(180deg, rgba(56, 139, 253, 0.10), rgba(13, 17, 23, 0.82));
+      background: linear-gradient(180deg, rgba(47, 129, 247, 0.10), rgba(13, 17, 23, 0.82));
     }
 
     .checklist {
@@ -348,13 +410,13 @@
       margin: 0.7rem 0 0;
       padding: 0;
       list-style: none;
-      color: #d1d5db;
+      color: var(--fg-default);
       font-size: 0.95rem;
     }
 
     .checklist li::before {
       content: "✓";
-      color: #34d399;
+      color: var(--success-fg);
       font-weight: 900;
       margin-right: 0.4rem;
     }
@@ -395,12 +457,24 @@
     .trust-card,
     details {
       border: 1px solid var(--line);
-      border-radius: 26px;
+      border-radius: calc(var(--radius) + 0.35rem);
       background:
         linear-gradient(180deg, rgba(22, 27, 34, 0.98), rgba(13, 17, 23, 0.94)),
         var(--surface);
       box-shadow: 0 18px 48px rgba(1, 4, 9, 0.42);
       transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+    }
+
+    .card,
+    .role-card,
+    .step,
+    .trust-card,
+    details,
+    .proof-strip,
+    .final-box {
+      box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.03) inset,
+        0 18px 48px rgba(1, 4, 9, 0.42);
     }
 
     .card,
@@ -433,11 +507,11 @@
       height: 2.4rem;
       display: grid;
       place-items: center;
-      border-radius: 16px;
+      border-radius: var(--radius);
       margin-bottom: 0.9rem;
       border: 1px solid rgba(88, 166, 255, 0.18);
-      background: rgba(56, 139, 253, 0.12);
-      color: #79c0ff;
+      background: rgba(47, 129, 247, 0.12);
+      color: var(--accent-fg);
       font-size: 1.25rem;
     }
 
@@ -461,6 +535,17 @@
       letter-spacing: -0.015em;
     }
 
+    .role-card h3::before {
+      content: "";
+      display: block;
+      width: 0.7rem;
+      height: 0.7rem;
+      margin-bottom: 0.85rem;
+      border-radius: 999px;
+      background: var(--done-fg);
+      box-shadow: 0 0 0 4px rgba(163, 113, 247, 0.14);
+    }
+
     .steps {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -481,8 +566,9 @@
       place-items: center;
       margin-bottom: 1rem;
       border-radius: 50%;
-      background: linear-gradient(135deg, rgba(47, 129, 247, 0.22), rgba(163, 113, 247, 0.20)), #010409;
-      color: #fff;
+      background: var(--canvas-inset);
+      border: 1px solid var(--border-default);
+      color: var(--accent-fg);
       font-weight: 900;
     }
 
@@ -498,7 +584,7 @@
       gap: 1rem;
       align-items: center;
       border: 1px solid var(--line);
-      border-radius: 18px;
+      border-radius: var(--radius);
       padding: 1rem;
       background: var(--surface);
     }
@@ -522,13 +608,13 @@
 
     .final-box {
       text-align: center;
-      border-radius: 38px;
+      border-radius: calc(var(--radius) + 1.1rem);
       padding: clamp(2rem, 7vw, 5rem);
       background:
         radial-gradient(circle at 20% 0%, rgba(47, 129, 247, 0.32), transparent 32rem),
         radial-gradient(circle at 86% 10%, rgba(163, 113, 247, 0.26), transparent 28rem),
-        #010409;
-      color: #fff;
+        var(--canvas-inset);
+      color: var(--fg-on-emphasis);
       box-shadow: var(--shadow);
       border: 1px solid rgba(88, 166, 255, 0.20);
     }
@@ -542,7 +628,7 @@
     .final-box p {
       max-width: 650px;
       margin: 0 auto;
-      color: #d1d5db;
+      color: var(--fg-default);
     }
 
     .final-box .actions {
@@ -659,6 +745,10 @@
             <a class="button secondary" href="#build">See what you can build</a>
           </div>
           <p class="trust-line">No terminal. No code editor. You approve each step.</p>
+          <div class="prompt-strip" aria-label="Starter prompt example">
+            <span>Starter prompt</span>
+            <span>Help me build a simple plan for my idea.</span>
+          </div>
         </div>
 
         <div class="hero-panel" aria-label="Example of using Copilot in natural language">
@@ -667,6 +757,8 @@
               <span class="dot"></span>
               <span class="dot"></span>
               <span class="dot"></span>
+              <span class="window-title">Copilot app</span>
+              <span class="window-badge">Guided</span>
             </div>
             <div class="conversation">
               <div class="bubble user">

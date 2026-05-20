@@ -111,6 +111,7 @@ Copilot App First Steps is a conversational tutor skill. Testing is done with co
 - Confirm every visual has text equivalents.
 - Confirm `assets/hero.svg` includes `<title>` and `<desc>` and does not recreate unofficial GitHub or Copilot logos.
 - Confirm the design uses the official Copilot palette direction from the GitHub Brand Toolkit: GitHub dark surfaces, blue primary actions, and Copilot purple accents.
+- Confirm the UI uses shadcn/ui-inspired static components without adding an unsupported build requirement.
 - Confirm no raw brand guideline sheets or product lockup reference images are shown in learner-facing pages.
 - Confirm no destructive exercise examples exist.
 - Confirm `install.html` uses a blank `COPILOT_APP_SKILL_INSTALL_URL` until a supported URL is known.
