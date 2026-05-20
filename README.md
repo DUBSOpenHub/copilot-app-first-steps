@@ -1,7 +1,5 @@
 # Copilot App First Steps
 
-[![Validate](https://github.com/DUBSOpenHub/copilot-app-first-steps/actions/workflows/validate.yml/badge.svg)](https://github.com/DUBSOpenHub/copilot-app-first-steps/actions/workflows/validate.yml)
-[![Pages](https://github.com/DUBSOpenHub/copilot-app-first-steps/actions/workflows/pages.yml/badge.svg)](https://github.com/DUBSOpenHub/copilot-app-first-steps/actions/workflows/pages.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Policy](https://img.shields.io/badge/Security-Policy-brightgreen?logo=github)](SECURITY.md)
 
@@ -50,8 +48,10 @@ This repo follows the same pattern as the other DUBSOpenHub Copilot skill projec
 - `agents/copilot-app-first-steps.md` - product/design notes for the tutor
 - `SECURITY.md` - private vulnerability reporting policy
 - `CONTRIBUTING.md` - contribution workflow
-- `.github/workflows/validate.yml` - package validation
-- `.github/workflows/pages.yml` - one-click landing page deployment
+- `docs/workflows/validate.yml` - ready-to-activate package validation workflow
+- `docs/workflows/pages.yml` - ready-to-activate Pages deployment workflow
+
+Note: the workflow files are committed as templates under `docs/workflows/` because the current GitHub token used to create the repo does not include `workflow` scope. Move them to `.github/workflows/` after refreshing auth with `workflow` scope.
 
 ## What you will learn
 
