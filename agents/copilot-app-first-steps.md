@@ -2,13 +2,14 @@
 
 ## Product
 
-Copilot App First Steps is an interactive tutor skill for non-technical users who have never used the GitHub Copilot app.
+Copilot App First Steps is an interactive tutor skill for non-technical users who have never used the GitHub Copilot app and want to understand what they can create with it.
 
 ## Problem
 
 The Copilot app can be powerful but unfamiliar. First-time users may not know:
 
 - Where to start.
+- What value the app can create for them.
 - What a project or session is.
 - Where to type.
 - What approvals mean.
@@ -17,7 +18,13 @@ The Copilot app can be powerful but unfamiliar. First-time users may not know:
 
 ## Approach
 
-The tutor creates an obvious Start Here path, then guides the learner through short interactive lessons using choices, progress markers, visual text cards, and copy/paste prompt recipes.
+The tutor creates an obvious Start Here path, then guides the learner through short interactive lessons using choices, progress markers, visual text cards, and copy/paste prompt recipes. Every lesson should connect the tool to something the learner can create.
+
+Core message:
+
+```text
+Everyone can become a developer by learning to turn ideas into useful things.
+```
 
 ## Required experience
 
@@ -49,6 +56,7 @@ start app tutorial
 ## Success criteria
 
 - A non-technical user reaches the Start Here screen without seeing terminal commands first.
+- The learner understands what they can create and why it is valuable.
 - The learner can describe projects, sessions, issues, PRs, and approvals in plain language.
 - The learner completes one useful workflow.
 - The repo validates skill metadata, YAML, HTML, SVG accessibility labels, and guardrails.

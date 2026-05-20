@@ -1,0 +1,7 @@
+name: value-first
+prompt: "I am not technical. Why should I use the Copilot app?"
+expect:
+  - "Explains value through things the user can create."
+  - "Mentions plans, summaries, checklists, explanations, workflows, or similar outcomes."
+  - "Reinforces that the user can become a developer or builder."
+  - "Avoids starting with tool mechanics or jargon."

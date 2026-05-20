@@ -2,11 +2,559 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0; url=install.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A beginner-friendly interactive tutor for the GitHub Copilot app. Learn what you can create, why it matters, and how everyone can become a developer.">
   <title>Copilot App First Steps</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0d1117;
+      --panel: #161b22;
+      --panel-2: #21262d;
+      --text: #f0f6fc;
+      --muted: #8b949e;
+      --border: #30363d;
+      --blue: #2f81f7;
+      --blue-strong: #1f6feb;
+      --green: #3fb950;
+      --purple: #8534f3;
+      --purple-soft: #c898fd;
+      --orange: #f08a3a;
+      --orange-strong: #fe4c25;
+      --yellow: #d29922;
+      --danger: #f85149;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, #8534f333, transparent 30rem),
+        radial-gradient(circle at 85% 15%, #f08a3a26, transparent 26rem),
+        var(--bg);
+      color: var(--text);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: color-mix(in srgb, var(--bg) 86%, transparent);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(16px);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--purple), var(--orange));
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: clamp(4rem, 8vw, 7rem) 0 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.7rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: var(--green);
+      background: #161b22cc;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    h1 {
+      margin: 1.25rem 0 1rem;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 0.9;
+      letter-spacing: -0.075em;
+    }
+
+    .lede {
+      color: #c9d1d9;
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      line-height: 1.6;
+      max-width: 62ch;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-top: 2rem;
+    }
+
+    .button {
+      min-height: 3.25rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 14px;
+      padding: 0.9rem 1.15rem;
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid var(--border);
+    }
+
+    .button.primary {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    .button.primary:hover {
+      background: var(--blue-strong);
+    }
+
+    .button.secondary {
+      background: #161b22cc;
+      color: var(--text);
+    }
+
+    .hero-card {
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: #161b22cc;
+      padding: 1rem;
+      box-shadow: 0 24px 80px #01040999;
+    }
+
+    .hero-card img {
+      width: 100%;
+      border-radius: 18px;
+      display: block;
+    }
+
+    section {
+      padding: clamp(3rem, 7vw, 5rem) 0;
+    }
+
+    .section-title {
+      max-width: 780px;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin: 0 0 0.75rem;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .section-title p,
+    .card p,
+    .faq p {
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: color-mix(in srgb, var(--panel) 92%, transparent);
+      padding: 1.25rem;
+    }
+
+    .card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .number {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: #8534f333;
+      color: var(--purple-soft);
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+
+    .path {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .path-step {
+      display: grid;
+      grid-template-columns: 6rem 1fr;
+      gap: 1rem;
+      align-items: start;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: #161b22cc;
+      padding: 1rem;
+    }
+
+    .path-step strong {
+      color: #79c0ff;
+    }
+
+    .visuals {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .visuals img,
+    .brand-asset img {
+      width: 100%;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: var(--panel);
+    }
+
+    .brand-asset {
+      margin-top: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 1rem;
+      background: color-mix(in srgb, var(--panel) 92%, transparent);
+    }
+
+    .brand-asset p {
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0.75rem 0 0;
+    }
+
+    .safety {
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .safety-row {
+      display: grid;
+      grid-template-columns: 6rem 1fr;
+      gap: 1rem;
+      align-items: center;
+      padding: 1rem;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+    }
+
+    .safe-green strong { color: var(--green); }
+    .safe-yellow strong { color: var(--yellow); }
+    .safe-red strong { color: var(--danger); }
+
+    .faq {
+      display: grid;
+      gap: 1rem;
+    }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--panel);
+      padding: 1rem 1.25rem;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    code {
+      background: #010409;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.15rem 0.35rem;
+    }
+
+    .cta {
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      background: linear-gradient(135deg, #8534f344, #f08a3a26), var(--panel);
+      padding: clamp(2rem, 6vw, 4rem);
+    }
+
+    .cta p {
+      color: #c9d1d9;
+      max-width: 680px;
+      margin: 0.75rem auto 0;
+      line-height: 1.65;
+    }
+
+    footer {
+      padding: 2.5rem 0;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .grid,
+      .visuals {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .path-step,
+      .safety-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <p><a href="install.html">Start Copilot App First Steps</a></p>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Copilot App First Steps home">
+        <span class="mark" aria-hidden="true">C</span>
+        <span>Copilot App First Steps</span>
+      </a>
+      <div class="nav-links">
+        <a href="#path">How it works</a>
+        <a href="#tour">Guided tour</a>
+        <a href="#safety">Safety</a>
+        <a href="https://github.com/DUBSOpenHub/copilot-app-first-steps">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Start here if you are new</div>
+          <h1>Turn ideas into things you can ship.</h1>
+          <p class="lede">
+            Copilot App First Steps helps non-technical users understand the value
+            of the GitHub Copilot app by creating something useful right away: a plan,
+            a summary, a status update, an issue breakdown, a PR explanation, or a
+            first project workflow. Everyone can become a developer.
+          </p>
+          <div class="actions">
+            <a class="button primary" href="install.html">Install tutor and start</a>
+            <a class="button secondary" href="https://github.com/DUBSOpenHub/copilot-app-first-steps">View the repo</a>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Preview of the tutor">
+          <img src="assets/hero.svg" alt="Simplified Copilot app window with a Start Here card and install button">
+        </div>
+      </div>
+    </section>
+
+    <section id="audience">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Built for people who want to create, not decode tools.</h2>
+          <p>
+            The tutor starts from the learner's goal: "What can I make with this?"
+            Then it shows how the app helps turn plain-language intent into useful
+            work without requiring Git, terminal, or code knowledge first.
+          </p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="number">1</div>
+            <h3>Create useful work first</h3>
+            <p>Draft a status update, summarize a project, turn an issue into steps, or explain a PR in plain English.</p>
+          </article>
+          <article class="card">
+            <div class="number">2</div>
+            <h3>Learn by doing</h3>
+            <p>The first win comes before the vocabulary lesson. Concepts are explained only when they help the learner create.</p>
+          </article>
+          <article class="card">
+            <div class="number">3</div>
+            <h3>Become a builder</h3>
+            <p>The message is simple: you do not need to start as a developer to begin thinking and creating like one.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="path">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>The value path</h2>
+          <p>Every step connects the app to a concrete outcome the learner can create.</p>
+        </div>
+        <div class="path">
+          <div class="path-step"><strong>Imagine</strong><span>Pick something useful to create: a plan, summary, checklist, explanation, or status update.</span></div>
+          <div class="path-step"><strong>Ask</strong><span>Use plain English. The tutor gives copy/paste prompts that turn intent into action.</span></div>
+          <div class="path-step"><strong>Review</strong><span>Learn what Copilot wants to do, approve safely, and ask for simpler explanations anytime.</span></div>
+          <div class="path-step"><strong>Ship</strong><span>Finish one real workflow and keep a starter prompt card for the next thing you build.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tour">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Designed with Copilot brand guidance.</h2>
+          <p>
+            The design follows GitHub's Copilot brand direction: mostly neutral
+            GitHub surfaces, Copilot purple and orange accents, clear product context,
+            and no deprecated standalone Copilot logo hero.
+          </p>
+        </div>
+        <div class="visuals">
+          <img src="assets/start-here.svg" alt="Start Here menu with three beginner choices">
+          <img src="assets/app-map.svg" alt="Simplified app layout showing projects, conversation, prompt box, and approval pop-ups">
+        </div>
+        <div class="brand-asset">
+          <img src="assets/brand/github-copilot-product-lockup.png" alt="Official GitHub Copilot product lockup examples from the GitHub Brand Toolkit">
+          <p>
+            Brand reference: this page uses the official GitHub Copilot palette and
+            product context guidance from the GitHub Brand Toolkit. The lockup image
+            above is included unmodified as a reference and is not used as this
+            project's logo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="safety">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Confidence is part of the value.</h2>
+          <p>
+            The tutor teaches that Copilot suggests and the human decides. That safety
+            model helps non-technical users move from watching AI to actively creating
+            with it.
+          </p>
+        </div>
+        <div class="safety">
+          <div class="safety-row safe-green"><strong>Green</strong><span>Read or explain - usually safe.</span></div>
+          <div class="safety-row safe-yellow"><strong>Yellow</strong><span>Create or edit - review first.</span></div>
+          <div class="safety-row safe-red"><strong>Red</strong><span>Delete, overwrite, publish, or merge - pause and ask why.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-title">
+          <h2>Questions people ask first</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Is this an official GitHub product?</summary>
+            <p>This is a DUBSOpenHub tutor skill for the GitHub Copilot app. It uses GitHub Copilot brand guidance, but it does not claim official GitHub approval or endorsement.</p>
+          </details>
+          <details>
+            <summary>Does one click fully install the skill?</summary>
+            <p>The page uses the safest supported path today: it copies <code>start app tutorial</code> and opens the official Copilot app install page. If GitHub publishes an app skill deep link later, the page is ready to wire it in.</p>
+          </details>
+          <details>
+            <summary>Who is it for?</summary>
+            <p>Product managers, designers, support teammates, managers, founders, operations partners, and anyone curious about using the Copilot app without developer jargon.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="cta">
+          <h2>Ready to create your first thing?</h2>
+          <p>
+            Start with the tutor, paste one phrase into the Copilot app, and build
+            your first useful workflow one step at a time.
+          </p>
+          <div class="actions" style="justify-content: center;">
+            <a class="button primary" href="install.html">Install tutor and start</a>
+            <a class="button secondary" href="https://github.com/DUBSOpenHub/copilot-app-first-steps/blob/main/docs/QA_REVIEW.md">Read the QA review</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>🐙 Created with 💜 by @DUBSOpenHub with the GitHub Copilot CLI.</span>
+      <span><a href="https://github.com/DUBSOpenHub/copilot-app-first-steps">GitHub repo</a></span>
+    </div>
+  </footer>
 </body>
 </html>

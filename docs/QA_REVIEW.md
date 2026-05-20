@@ -26,6 +26,8 @@ Result: pass with one known operational limitation.
 
 - README has one obvious first action.
 - README includes a top hero graphic with accessible alt text.
+- GitHub Pages root URL serves a discovery landing page.
+- Discovery copy explains what non-technical users can create and why it is valuable.
 - Landing page is reachable from the README.
 - Landing page contains the phrase `start app tutorial`.
 - Landing page links to the official Copilot app releases page.
@@ -48,9 +50,33 @@ Result: pass with one known operational limitation.
 - Catalog references resolve.
 - SVG assets include `<title>` and `<desc>`.
 - The top hero graphic is brand-safe and does not recreate unofficial GitHub or Copilot logos.
+- Design uses official GitHub Copilot Brand Toolkit direction: neutral surfaces, Copilot purple/orange accents, and no deprecated standalone Copilot logo hero.
+- Official Copilot product lockup asset is included unmodified as a reference, not as the project logo.
 - Agent prompt is under 200 lines.
 - User-facing content does not lead with terminal setup.
-- Eval task count is 10.
+- Eval task count is 11.
+
+### Discovery landing page
+
+Added a full `index.html` discovery page for public sharing. It includes:
+
+- Hero section.
+- Audience framing.
+- Guided path explanation.
+- Visual tour.
+- Safety model.
+- FAQ.
+- Calls to action for install/start, repo, and QA review.
+
+### Updated: value-first non-technical framing
+
+Updated the README, landing page, skill instructions, and agent guidance to focus on what learners can create: plans, summaries, checklists, issue breakdowns, PR explanations, status updates, and repeatable workflows. The core message is that everyone can become a developer by learning to turn ideas into useful things.
+
+### Updated: Copilot brand guidance
+
+Updated the visual direction to follow the public GitHub Copilot Brand Toolkit: neutral GitHub surfaces, Copilot purple/orange accent colors, product context, and no deprecated standalone Copilot logo hero.
+
+Added the official Copilot product lockup image from the GitHub Brand Toolkit at `assets/brand/github-copilot-product-lockup.png`, included unmodified as a reference asset.
 
 ### Remote repo
 

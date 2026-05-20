@@ -7,9 +7,13 @@
   <img src="assets/hero.svg" alt="Copilot App First Steps hero showing a simplified Copilot app window and Start Here guidance" width="100%">
 </p>
 
-> A guided, beginner-friendly tutor for people who have never used the GitHub Copilot app.
+> A guided, beginner-friendly tutor that helps non-technical users understand the value of the GitHub Copilot app by creating something useful. Everyone can become a developer.
 
 ## Start here
+
+Discovery page:
+
+https://dubsopenhub.github.io/copilot-app-first-steps/
 
 If you are brand new, use the button below.
 
@@ -19,7 +23,7 @@ If you are brand new, use the button below.
   </a>
 </p>
 
-This opens the simple start page, copies the tutor phrase, and sends you to the official Copilot app install/open path:
+This opens the simple start page, copies the tutor phrase, and helps you create your first useful workflow:
 
 ```text
 start app tutorial
@@ -29,7 +33,7 @@ No terminal commands are required for the main path.
 
 ## Who this is for
 
-This is for non-technical or first-time users who want to learn the GitHub Copilot app without needing to understand Git, branches, pull requests, terminals, or developer jargon first.
+This is for non-technical or first-time users who want to understand what the GitHub Copilot app can help them create without needing to understand Git, branches, pull requests, terminals, or developer jargon first.
 
 Good fits:
 
@@ -41,17 +45,17 @@ Good fits:
 - Operations partners
 - Anyone curious about what the Copilot app can do
 
-## What you will learn
+## What you can create
 
-By the end, you will be able to:
+By the end, you will be able to create:
 
-1. Open the Copilot app and know where to start.
-2. Understand the main parts of the app.
-3. Ask useful questions in plain English.
-4. Understand projects and sessions.
-5. Approve, deny, or pause actions safely.
-6. Ask Copilot to explain issues and pull requests in plain language.
-7. Complete one real workflow with confidence.
+1. A plain-English project summary.
+2. A checklist from a GitHub issue.
+3. A non-technical pull request explanation.
+4. A project plan before anything changes.
+5. A status update from project context.
+6. A first real workflow you can repeat.
+7. Confidence that you can become a developer by learning to create with the app.
 
 ## The guided path
 
@@ -87,7 +91,7 @@ The tutor will ask one question at a time and guide you through the app.
 
 ## What makes this different
 
-This is not a command-line tutorial. It is specific to the GitHub Copilot app:
+This starts from user value, not tool mechanics. It is specific to the GitHub Copilot app:
 
 - Chat overlay
 - Project sessions
@@ -97,7 +101,17 @@ This is not a command-line tutorial. It is specific to the GitHub Copilot app:
 - Guided work
 - Session navigation
 
-The tutor explains everything in beginner language and avoids technical shortcuts unless you ask for them.
+The tutor explains everything in beginner language and keeps asking: "What can you create next?"
+
+## Brand guidance
+
+The design follows the [GitHub Copilot Brand Toolkit](https://brand.github.com/brand-identity/copilot): neutral GitHub surfaces, Copilot purple/orange accents, clear product context, and no deprecated standalone Copilot logo hero.
+
+Official Copilot product lockup reference from the GitHub Brand Toolkit:
+
+![GitHub Copilot product lockup examples](assets/brand/github-copilot-product-lockup.png)
+
+The lockup reference is included unmodified and is not used as this project's logo.
 
 ## Having trouble?
 
@@ -191,7 +205,9 @@ copilot-app-first-steps/
 │   ├── hero.svg
 │   ├── install-button.svg
 │   ├── app-map.svg
-│   └── approval-prompt.svg
+│   ├── approval-prompt.svg
+│   └── brand/
+│       └── github-copilot-product-lockup.png
 ├── docs/
 │   └── workflows/
 │       ├── validate.yml
