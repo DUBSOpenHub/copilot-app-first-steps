@@ -3,9 +3,9 @@
   <desc id="desc">A GitHub-aligned hero graphic for Copilot App First Steps showing a natural-language Copilot conversation that turns project notes into a useful team update.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FFFFFF"/>
-      <stop offset="0.62" stop-color="#F6F8FA"/>
-      <stop offset="1" stop-color="#DDF4FF"/>
+      <stop offset="0" stop-color="#0D1117"/>
+      <stop offset="0.62" stop-color="#010409"/>
+      <stop offset="1" stop-color="#161B22"/>
     </linearGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0969DA"/>
@@ -17,12 +17,12 @@
   </defs>
 
   <rect width="1280" height="520" rx="36" fill="url(#bg)"/>
-  <circle cx="1050" cy="80" r="220" fill="#0969DA" opacity="0.10"/>
-  <circle cx="1180" cy="420" r="180" fill="#8250DF" opacity="0.10"/>
-  <circle cx="140" cy="440" r="190" fill="#1A7F37" opacity="0.07"/>
+  <circle cx="1050" cy="80" r="220" fill="#2F81F7" opacity="0.22"/>
+  <circle cx="1180" cy="420" r="180" fill="#A371F7" opacity="0.18"/>
+  <circle cx="140" cy="440" r="190" fill="#3FB950" opacity="0.08"/>
 
   <g transform="translate(70 74)">
-    <rect width="550" height="372" rx="28" fill="#0d1117" stroke="#d0d7de" filter="url(#shadow)"/>
+    <rect width="550" height="372" rx="28" fill="#0d1117" stroke="#30363d" filter="url(#shadow)"/>
     <rect x="0" y="0" width="550" height="58" rx="28" fill="#1f2937"/>
     <circle cx="34" cy="29" r="7" fill="#f85149"/>
     <circle cx="58" cy="29" r="7" fill="#d29922"/>
@@ -49,18 +49,18 @@
   </g>
 
   <g transform="translate(690 104)">
-    <rect x="0" y="0" width="230" height="34" rx="17" fill="#DDF4FF"/>
-    <text x="22" y="23" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0550AE">5 minutes to your first win</text>
+    <rect x="0" y="0" width="230" height="34" rx="17" fill="#2F81F7" opacity="0.18"/>
+    <text x="22" y="23" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#79C0FF">5 minutes to your first win</text>
 
-    <text x="0" y="94" font-family="Arial, sans-serif" font-size="56" font-weight="800" fill="#111827">Build the thing</text>
-    <text x="0" y="158" font-family="Arial, sans-serif" font-size="56" font-weight="800" fill="#111827">you have been</text>
-    <text x="0" y="222" font-family="Arial, sans-serif" font-size="56" font-weight="800" fill="#111827">waiting for.</text>
-    <text x="0" y="276" font-family="Arial, sans-serif" font-size="23" fill="#374151">No code editor. No terminal. Just ask.</text>
+    <text x="0" y="94" font-family="Arial, sans-serif" font-size="56" font-weight="800" fill="#F0F6FC">Build the thing</text>
+    <text x="0" y="158" font-family="Arial, sans-serif" font-size="56" font-weight="800" fill="#F0F6FC">you have been</text>
+    <text x="0" y="222" font-family="Arial, sans-serif" font-size="56" font-weight="800" fill="#F0F6FC">waiting for.</text>
+    <text x="0" y="276" font-family="Arial, sans-serif" font-size="23" fill="#C9D1D9">No code editor. No terminal. Just ask.</text>
 
     <rect x="0" y="292" width="315" height="62" rx="18" fill="url(#accent)"/>
     <text x="28" y="332" font-family="Arial, sans-serif" font-size="21" font-weight="800" fill="#ffffff">Open the app and build</text>
 
     <rect x="0" y="382" width="420" height="1" fill="#30363d"/>
-    <text x="0" y="420" font-family="Arial, sans-serif" font-size="17" fill="#374151">Everyone can become a developer.</text>
+    <text x="0" y="420" font-family="Arial, sans-serif" font-size="17" fill="#C9D1D9">Everyone can become a developer.</text>
   </g>
 </svg>

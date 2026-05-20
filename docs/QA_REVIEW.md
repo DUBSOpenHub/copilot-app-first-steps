@@ -50,7 +50,7 @@ Result: pass with one known operational limitation.
 - Catalog references resolve.
 - SVG assets include `<title>` and `<desc>`.
 - The top hero graphic is brand-safe and does not recreate unofficial GitHub or Copilot logos.
-- Design uses official GitHub Copilot Brand Toolkit direction: neutral surfaces, Copilot purple/orange accents, and no deprecated standalone Copilot logo hero.
+- Design uses official GitHub Copilot Brand Toolkit direction: GitHub dark surfaces, blue primary actions, Copilot purple accents, and no deprecated standalone Copilot logo hero.
 - Raw brand guideline sheets and product lockup references are not shown in learner-facing pages.
 - Agent prompt is under 200 lines.
 - User-facing content does not lead with terminal setup.
@@ -74,7 +74,7 @@ Updated the README, landing page, skill instructions, and agent guidance to focu
 
 ### Updated: Copilot brand guidance
 
-Updated the visual direction to follow the public GitHub Copilot Brand Toolkit: neutral GitHub surfaces, Copilot purple/orange accent colors, product context, and no deprecated standalone Copilot logo hero.
+Updated the visual direction to follow the public GitHub Copilot Brand Toolkit: dark GitHub surfaces, GitHub blue primary actions, Copilot purple accents, product context, and no deprecated standalone Copilot logo hero.
 
 Brand guidance stays in documentation; raw guideline sheets and product lockup examples are not embedded in the learner-facing experience.
 

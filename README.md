@@ -105,9 +105,9 @@ The tutor explains everything in beginner language and keeps asking: "What can y
 
 ## Brand guidance
 
-The design follows the [GitHub Copilot Brand Toolkit](https://brand.github.com/brand-identity/copilot): neutral GitHub surfaces, Copilot purple/orange accents, clear product context, and no deprecated standalone Copilot logo hero.
+The design follows the [GitHub Copilot Brand Toolkit](https://brand.github.com/brand-identity/copilot): dark GitHub surfaces, GitHub blue primary actions, Copilot purple accents, clear product context, and no deprecated standalone Copilot logo hero.
 
-The public page uses brand-inspired colors and neutral GitHub surfaces, but it does not show raw brand guideline sheets or product lockup guidance to learners.
+The public page uses brand-inspired colors and GitHub dark surfaces, but it does not show raw brand guideline sheets or product lockup guidance to learners.
 
 ## Having trouble?
 

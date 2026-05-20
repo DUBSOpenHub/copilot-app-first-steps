@@ -2,13 +2,13 @@
 
 This project follows the public [GitHub Copilot Brand Toolkit](https://brand.github.com/brand-identity/copilot).
 
-No raw brand guideline sheets or product lockup reference images are shown in the learner-facing page. Brand guidance is applied through color, spacing, neutral surfaces, and clear product context.
+No raw brand guideline sheets or product lockup reference images are shown in the learner-facing page. Brand guidance is applied through color, spacing, GitHub dark surfaces, and clear product context.
 
 ## Applied guidance
 
-- Use mostly neutral GitHub surfaces.
-- Use Copilot Purple `#8534F3` as the primary Copilot accent.
-- Use Copilot Orange `#F08A3A` and `#FE4C25` sparingly for warmth and momentum.
+- Use GitHub dark surfaces with strong text contrast.
+- Use GitHub blue for primary actions.
+- Use Copilot purple as the primary Copilot accent.
 - Keep GitHub Green usage minimal and functional.
 - Do not hero the deprecated standalone Copilot logo.
 - Do not recreate or modify GitHub logos or product lockups.
@@ -26,6 +26,6 @@ The page is designed from the learner's perspective:
 
 ## Current implementation
 
-- `index.html` uses the official Copilot palette values.
-- `assets/hero.svg` uses neutral surfaces plus Copilot purple/orange accents.
+- `index.html` uses GitHub dark surfaces, GitHub blue CTAs, and Copilot purple accents.
+- `assets/hero.svg` uses the same dark surface and blue/purple accent direction.
 - The README and landing page avoid embedding brand guideline sheets or product lockup references as user-facing content.

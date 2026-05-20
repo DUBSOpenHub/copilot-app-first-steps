@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#0d1117">
   <meta name="description" content="A beginner-friendly first step for the GitHub Copilot app. Open the app, describe what you need in natural language, and start building something useful.">
   <meta property="og:title" content="Copilot App First Steps">
   <meta property="og:description" content="You have ideas. Now you can build them with the GitHub Copilot app. No coding background required.">
@@ -14,21 +14,22 @@
   <title>Copilot App First Steps | Build with the GitHub Copilot App</title>
   <style>
     :root {
-      color-scheme: light;
-      --bg: #ffffff;
-      --surface: #ffffff;
-      --surface-soft: #f6f8fa;
-      --ink: #24292f;
-      --muted: #57606a;
-      --line: #d0d7de;
-      --blue: #0969da;
-      --blue-dark: #0550ae;
-      --purple: #8250df;
-      --purple-dark: #6639ba;
-      --attention: #bf8700;
-      --green: #1a7f37;
-      --red: #cf222e;
-      --shadow: 0 24px 70px rgba(31, 35, 40, 0.12);
+      color-scheme: dark;
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface-soft: #21262d;
+      --ink: #f0f6fc;
+      --muted: #8b949e;
+      --line: #30363d;
+      --blue: #2f81f7;
+      --blue-dark: #1f6feb;
+      --purple: #a371f7;
+      --purple-dark: #8957e5;
+      --attention: #d29922;
+      --green: #3fb950;
+      --red: #f85149;
+      --shadow: 0 30px 90px rgba(1, 4, 9, 0.68);
+      --ring: #58a6ff;
     }
 
     * {
@@ -44,11 +45,27 @@
       margin: 0;
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
-        radial-gradient(circle at 8% 0%, rgba(9, 105, 218, 0.12), transparent 28rem),
-        radial-gradient(circle at 92% 8%, rgba(130, 80, 223, 0.10), transparent 24rem),
+        radial-gradient(circle at 8% -4%, rgba(47, 129, 247, 0.32), transparent 31rem),
+        radial-gradient(circle at 92% 4%, rgba(163, 113, 247, 0.24), transparent 26rem),
+        linear-gradient(180deg, #0d1117 0%, #010409 100%),
         var(--bg);
       color: var(--ink);
       line-height: 1.6;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      background:
+        linear-gradient(rgba(240, 246, 252, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(240, 246, 252, 0.025) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, #000 0%, transparent 72%);
     }
 
     a {
@@ -72,7 +89,7 @@
     }
 
     :focus-visible {
-      outline: 3px solid var(--blue);
+      outline: 3px solid var(--ring);
       outline-offset: 4px;
     }
 
@@ -85,8 +102,8 @@
       position: sticky;
       top: 0;
       z-index: 10;
-      border-bottom: 1px solid rgba(208, 215, 222, 0.85);
-      background: rgba(255, 255, 255, 0.88);
+      border-bottom: 1px solid rgba(48, 54, 61, 0.85);
+      background: rgba(13, 17, 23, 0.84);
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
     }
@@ -116,7 +133,7 @@
       place-items: center;
       color: #fff;
       background: linear-gradient(135deg, var(--blue), var(--purple));
-      box-shadow: 0 12px 30px rgba(9, 105, 218, 0.22);
+      box-shadow: 0 12px 34px rgba(47, 129, 247, 0.34);
       font-weight: 900;
     }
 
@@ -159,8 +176,9 @@
       gap: 0.45rem;
       padding: 0.45rem 0.75rem;
       border-radius: 999px;
-      background: #ddf4ff;
-      color: var(--blue-dark);
+      border: 1px solid rgba(88, 166, 255, 0.24);
+      background: rgba(56, 139, 253, 0.12);
+      color: #79c0ff;
       font-size: 0.82rem;
       font-weight: 900;
       letter-spacing: 0.04em;
@@ -221,22 +239,35 @@
       text-decoration: none;
       font-weight: 900;
       line-height: 1.1;
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
     }
 
     .button.primary {
-      background: var(--blue);
-      border-color: var(--blue);
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+      border-color: rgba(88, 166, 255, 0.55);
       color: #fff;
-      box-shadow: 0 18px 42px rgba(9, 105, 218, 0.22);
+      box-shadow:
+        0 18px 42px rgba(47, 129, 247, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.08) inset;
     }
 
     .button.primary:hover {
-      background: var(--blue-dark);
+      background: linear-gradient(135deg, var(--blue-dark), var(--purple-dark));
+      transform: translateY(-1px);
+      box-shadow:
+        0 22px 54px rgba(47, 129, 247, 0.35),
+        0 0 0 1px rgba(255, 255, 255, 0.12) inset;
     }
 
     .button.secondary {
       background: var(--surface);
       color: var(--ink);
+    }
+
+    .button.secondary:hover {
+      border-color: rgba(88, 166, 255, 0.48);
+      box-shadow: 0 14px 34px rgba(1, 4, 9, 0.34);
+      transform: translateY(-1px);
     }
 
     .trust-line {
@@ -248,7 +279,9 @@
     .hero-panel {
       border: 1px solid var(--line);
       border-radius: 34px;
-      background: var(--surface);
+      background:
+        linear-gradient(180deg, rgba(33, 38, 45, 0.88), rgba(13, 17, 23, 0.94)),
+        var(--surface);
       box-shadow: var(--shadow);
       padding: clamp(1rem, 3vw, 1.35rem);
     }
@@ -257,8 +290,9 @@
       overflow: hidden;
       border: 1px solid var(--line);
       border-radius: 26px;
-      background: #111827;
+      background: #010409;
       color: #f9fafb;
+      box-shadow: 0 0 0 1px rgba(88, 166, 255, 0.10), 0 30px 80px rgba(1, 4, 9, 0.65);
     }
 
     .app-bar {
@@ -291,21 +325,21 @@
     }
 
     .bubble.user {
-      background: #312e81;
+      background: linear-gradient(135deg, #1f6feb, #8250df);
       justify-self: end;
       max-width: 88%;
     }
 
     .bubble.copilot {
-      background: #1f2937;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #161b22;
+      border: 1px solid var(--line);
     }
 
     .result-card {
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(88, 166, 255, 0.18);
       border-radius: 20px;
       padding: 1rem;
-      background: rgba(255, 255, 255, 0.06);
+      background: linear-gradient(180deg, rgba(56, 139, 253, 0.10), rgba(13, 17, 23, 0.82));
     }
 
     .checklist {
@@ -362,8 +396,11 @@
     details {
       border: 1px solid var(--line);
       border-radius: 26px;
-      background: var(--surface);
-      box-shadow: 0 14px 38px rgba(17, 24, 39, 0.07);
+      background:
+        linear-gradient(180deg, rgba(22, 27, 34, 0.98), rgba(13, 17, 23, 0.94)),
+        var(--surface);
+      box-shadow: 0 18px 48px rgba(1, 4, 9, 0.42);
+      transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
     }
 
     .card,
@@ -371,6 +408,15 @@
     .step,
     .trust-card {
       padding: 1.25rem;
+    }
+
+    .card:hover,
+    .role-card:hover,
+    .step:hover,
+    .trust-card:hover {
+      border-color: rgba(88, 166, 255, 0.38);
+      box-shadow: 0 24px 64px rgba(1, 4, 9, 0.58), 0 0 42px rgba(47, 129, 247, 0.08);
+      transform: translateY(-2px);
     }
 
     .card p,
@@ -389,8 +435,9 @@
       place-items: center;
       border-radius: 16px;
       margin-bottom: 0.9rem;
-      background: #ddf4ff;
-      color: var(--blue-dark);
+      border: 1px solid rgba(88, 166, 255, 0.18);
+      background: rgba(56, 139, 253, 0.12);
+      color: #79c0ff;
       font-size: 1.25rem;
     }
 
@@ -399,7 +446,7 @@
       border-radius: 30px;
       padding: clamp(1.2rem, 4vw, 2rem);
       background:
-        linear-gradient(135deg, rgba(9, 105, 218, 0.10), rgba(130, 80, 223, 0.08)),
+        linear-gradient(135deg, rgba(47, 129, 247, 0.20), rgba(163, 113, 247, 0.16)),
         var(--surface);
       box-shadow: var(--shadow);
     }
@@ -434,7 +481,7 @@
       place-items: center;
       margin-bottom: 1rem;
       border-radius: 50%;
-      background: var(--ink);
+      background: linear-gradient(135deg, rgba(47, 129, 247, 0.22), rgba(163, 113, 247, 0.20)), #010409;
       color: #fff;
       font-weight: 900;
     }
@@ -477,9 +524,13 @@
       text-align: center;
       border-radius: 38px;
       padding: clamp(2rem, 7vw, 5rem);
-      background: var(--ink);
+      background:
+        radial-gradient(circle at 20% 0%, rgba(47, 129, 247, 0.32), transparent 32rem),
+        radial-gradient(circle at 86% 10%, rgba(163, 113, 247, 0.26), transparent 28rem),
+        #010409;
       color: #fff;
       box-shadow: var(--shadow);
+      border: 1px solid rgba(88, 166, 255, 0.20);
     }
 
     .final-box h2 {
@@ -553,6 +604,12 @@
         z-index: 12;
         display: flex;
         justify-content: center;
+        padding: 0.5rem;
+        border: 1px solid rgba(48, 54, 61, 0.85);
+        border-radius: 999px;
+        background: rgba(13, 17, 23, 0.78);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
       }
 
       .mobile-cta .button {
