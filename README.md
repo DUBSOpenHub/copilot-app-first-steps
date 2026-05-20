@@ -3,6 +3,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Security Policy](https://img.shields.io/badge/Security-Policy-brightgreen?logo=github)](SECURITY.md)
 
+<p>
+  <img src="assets/hero.svg" alt="Copilot App First Steps hero showing a simplified Copilot app window and Start Here guidance" width="100%">
+</p>
+
 > A guided, beginner-friendly tutor for people who have never used the GitHub Copilot app.
 
 ## Start here
@@ -15,7 +19,7 @@ If you are brand new, use the button below.
   </a>
 </p>
 
-If the app is already installed, this starts the easiest path into the tutor. If the app is not installed, it sends you to the official install page and gives you the one phrase to type when the app opens:
+This opens the simple start page, copies the tutor phrase, and sends you to the official Copilot app install/open path:
 
 ```text
 start app tutorial
@@ -36,22 +40,6 @@ Good fits:
 - Founders
 - Operations partners
 - Anyone curious about what the Copilot app can do
-
-## Repository contents
-
-This repo follows the same pattern as the other DUBSOpenHub Copilot skill projects:
-
-- `SKILL.md` - root skill entry for quick inspection
-- `skills/copilot-app-first-steps/SKILL.md` - canonical skill package
-- `.github/skills/copilot-app-first-steps/SKILL.md` - GitHub-discoverable skill copy
-- `agents/copilot-app-first-steps.agent.md` - agent persona/config
-- `agents/copilot-app-first-steps.md` - product/design notes for the tutor
-- `SECURITY.md` - private vulnerability reporting policy
-- `CONTRIBUTING.md` - contribution workflow
-- `docs/workflows/validate.yml` - ready-to-activate package validation workflow
-- `docs/workflows/pages.yml` - ready-to-activate Pages deployment workflow
-
-Note: the workflow files are committed as templates under `docs/workflows/` because the current GitHub token used to create the repo does not include `workflow` scope. Move them to `.github/workflows/` after refreshing auth with `workflow` scope.
 
 ## What you will learn
 
@@ -163,18 +151,51 @@ skills/copilot-app-first-steps/SKILL.md
 
 Use whichever location your Copilot app or skill loader supports. The primary learner path should remain the one-click install page, not manual setup.
 
+## Repository contents
+
+This repo follows the same pattern as the other DUBSOpenHub Copilot skill projects:
+
+- `README.md` - learner-facing start page
+- `install.html` and `index.html` - one-click landing page
+- `SKILL.md` - root skill entry for quick inspection
+- `skills/copilot-app-first-steps/SKILL.md` - canonical skill package
+- `.github/skills/copilot-app-first-steps/SKILL.md` - GitHub-discoverable skill copy
+- `agents/copilot-app-first-steps.agent.md` - agent persona/config
+- `agents/copilot-app-first-steps.md` - product/design notes for the tutor
+- `SECURITY.md` - private vulnerability reporting policy
+- `CONTRIBUTING.md` - contribution workflow
+- `docs/QA_REVIEW.md` - latest QA review results
+- `docs/workflows/validate.yml` - ready-to-activate package validation workflow
+- `docs/workflows/pages.yml` - ready-to-activate Pages deployment workflow
+
+Maintainer note: the workflow files are committed as templates under `docs/workflows/` because the token used to create the repo did not include `workflow` scope. Move them to `.github/workflows/` after refreshing auth with `workflow` scope.
+
 ## Package layout
 
 ```text
 copilot-app-first-steps/
 ├── README.md
+├── index.html
 ├── install.html
 ├── TESTING.md
+├── AGENTS.md
+├── SECURITY.md
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── LICENSE
+├── agents/
+│   ├── copilot-app-first-steps.agent.md
+│   └── copilot-app-first-steps.md
 ├── assets/
 │   ├── start-here.svg
+│   ├── hero.svg
 │   ├── install-button.svg
 │   ├── app-map.svg
 │   └── approval-prompt.svg
+├── docs/
+│   └── workflows/
+│       ├── validate.yml
+│       └── pages.yml
 ├── skills/
 │   └── copilot-app-first-steps/
 │       ├── SKILL.md

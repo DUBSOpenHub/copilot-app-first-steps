@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="520" viewBox="0 0 1280 520" role="img" aria-labelledby="title desc">
+  <title id="title">Copilot App First Steps hero</title>
+  <desc id="desc">A brand-safe hero graphic for Copilot App First Steps showing a simplified Copilot app window, a Start Here card, and the phrase Learn the Copilot app step by step.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="0.55" stop-color="#161b22"/>
+      <stop offset="1" stop-color="#0969da"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f81f7"/>
+      <stop offset="1" stop-color="#8250df"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#010409" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="520" rx="36" fill="url(#bg)"/>
+  <circle cx="1050" cy="80" r="220" fill="#2f81f7" opacity="0.16"/>
+  <circle cx="1180" cy="420" r="180" fill="#8250df" opacity="0.18"/>
+  <circle cx="140" cy="440" r="190" fill="#2da44e" opacity="0.08"/>
+
+  <g transform="translate(70 74)">
+    <rect width="550" height="372" rx="28" fill="#0d1117" stroke="#30363d" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="550" height="58" rx="28" fill="#161b22"/>
+    <circle cx="34" cy="29" r="7" fill="#f85149"/>
+    <circle cx="58" cy="29" r="7" fill="#d29922"/>
+    <circle cx="82" cy="29" r="7" fill="#3fb950"/>
+
+    <rect x="26" y="84" width="142" height="248" rx="18" fill="#161b22" stroke="#30363d"/>
+    <text x="46" y="120" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#f0f6fc">Projects</text>
+    <rect x="46" y="146" width="92" height="12" rx="6" fill="#8b949e" opacity="0.55"/>
+    <rect x="46" y="174" width="108" height="12" rx="6" fill="#8b949e" opacity="0.35"/>
+    <rect x="46" y="202" width="76" height="12" rx="6" fill="#8b949e" opacity="0.35"/>
+    <rect x="46" y="252" width="100" height="38" rx="12" fill="#0969da" opacity="0.32"/>
+    <text x="60" y="277" font-family="Arial, sans-serif" font-size="13" fill="#f0f6fc">New session</text>
+
+    <rect x="194" y="84" width="330" height="248" rx="18" fill="#161b22" stroke="#30363d"/>
+    <rect x="222" y="112" width="186" height="34" rx="17" fill="#21262d"/>
+    <text x="242" y="135" font-family="Arial, sans-serif" font-size="15" fill="#f0f6fc">Start Here</text>
+    <rect x="222" y="168" width="250" height="50" rx="16" fill="#0d1117" stroke="#30363d"/>
+    <text x="242" y="199" font-family="Arial, sans-serif" font-size="15" fill="#f0f6fc">I am new to the app</text>
+    <rect x="222" y="236" width="272" height="50" rx="16" fill="#0d1117" stroke="#30363d"/>
+    <text x="242" y="267" font-family="Arial, sans-serif" font-size="15" fill="#f0f6fc">Give me the guided tour</text>
+
+    <rect x="194" y="348" width="330" height="42" rx="18" fill="#010409" stroke="#2f81f7"/>
+    <text x="218" y="375" font-family="Arial, sans-serif" font-size="15" fill="#8b949e">Type: start app tutorial</text>
+  </g>
+
+  <g transform="translate(690 104)">
+    <rect x="0" y="0" width="132" height="34" rx="17" fill="#0969da" opacity="0.22"/>
+    <text x="22" y="23" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#f0f6fc">Start here</text>
+
+    <text x="0" y="94" font-family="Arial, sans-serif" font-size="58" font-weight="800" fill="#f0f6fc">Copilot App</text>
+    <text x="0" y="158" font-family="Arial, sans-serif" font-size="58" font-weight="800" fill="#f0f6fc">First Steps</text>
+    <text x="0" y="212" font-family="Arial, sans-serif" font-size="24" fill="#c9d1d9">Learn the Copilot app step by step.</text>
+    <text x="0" y="250" font-family="Arial, sans-serif" font-size="20" fill="#8b949e">Built for people who have never used it before.</text>
+
+    <rect x="0" y="292" width="315" height="62" rx="18" fill="url(#accent)"/>
+    <text x="34" y="332" font-family="Arial, sans-serif" font-size="22" font-weight="800" fill="#ffffff">Install tutor and start</text>
+
+    <rect x="0" y="382" width="420" height="1" fill="#30363d"/>
+    <text x="0" y="420" font-family="Arial, sans-serif" font-size="17" fill="#c9d1d9">No terminal commands in the main path</text>
+  </g>
+</svg>

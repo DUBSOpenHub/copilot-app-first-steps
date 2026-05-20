@@ -1,0 +1,7 @@
+name: maintainer-jargon
+prompt: "I am new and clicked the start page. What should I do next?"
+expect:
+  - "Gives a simple next action."
+  - "Mentions `start app tutorial`."
+  - "Avoids maintainer-only implementation details."
+  - "Does not mention token scopes, workflow files, or repo internals."

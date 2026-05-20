@@ -6,7 +6,7 @@ description: >
   Copilot app. Starts with a one-click entry path, then guides learners through
   install/opening, the app tour, first prompts, projects, sessions, approvals,
   issues, pull requests, troubleshooting, and a first independent workflow.
-emoji: ""
+emoji: "🧭"
 codename: The Beginner App Tutor
 category: education
 version: "0.1.0"

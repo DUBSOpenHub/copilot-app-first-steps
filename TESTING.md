@@ -5,6 +5,7 @@ Copilot App First Steps is a conversational tutor skill. Testing is done with co
 ## Core acceptance criteria
 
 - A non-technical user sees one obvious place to start.
+- README has a top hero graphic with accessible alt text.
 - No terminal commands appear in the primary onboarding path.
 - The tutor routes vague beginner messages to the Start Here menu.
 - Lessons show progress, a clear goal, and a safety note.
@@ -97,5 +98,6 @@ Copilot App First Steps is a conversational tutor skill. Testing is done with co
 
 - Search for `terminal`, `CLI`, `branch`, and `rebase`; confirm none are primary onboarding concepts.
 - Confirm every visual has text equivalents.
+- Confirm `assets/hero.svg` includes `<title>` and `<desc>` and does not recreate unofficial GitHub or Copilot logos.
 - Confirm no destructive exercise examples exist.
 - Confirm `install.html` uses a blank `COPILOT_APP_SKILL_INSTALL_URL` until a supported URL is known.

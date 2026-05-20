@@ -123,9 +123,9 @@
     <div class="eyebrow">Start here</div>
     <h1>Learn the Copilot app step by step.</h1>
     <p>
-      One button starts the simplest available path. If the Copilot app is installed,
-      use the copied phrase when it opens. If it is not installed, you will be taken
-      to the official app download page.
+      One button starts the simplest available path. It copies the phrase you need,
+      then opens the official Copilot app install page. After the app opens, paste
+      the phrase and the tutor begins.
     </p>
 
     <button id="start-button" type="button">Install tutor and start</button>
@@ -133,7 +133,7 @@
 
     <ul class="steps" aria-label="What happens next">
       <li><strong>Step 1:</strong> The phrase <code>start app tutorial</code> is copied for you.</li>
-      <li><strong>Step 2:</strong> You go to the Copilot app install/open path.</li>
+      <li><strong>Step 2:</strong> You go to the official Copilot app install page.</li>
       <li><strong>Step 3:</strong> In the app, paste <code>start app tutorial</code> and the tutor begins.</li>
     </ul>
 
@@ -142,18 +142,18 @@
     <details>
       <summary>Having trouble?</summary>
       <p>
-        The Copilot app does not currently document a universal one-click skill
-        install URL. This page uses the safest verified fallback and keeps the future
-        deep link in one replaceable constant.
+        If you already have the app, open it and paste <code>start app tutorial</code>.
+        If you do not have the app, use the official download page that opens after
+        you click the button.
       </p>
       <p>
-        If a future app skill URL is available, update <code>COPILOT_APP_SKILL_INSTALL_URL</code>
-        in this file.
+        If you see a login or access message, your account may need Copilot app
+        preview access or organization approval.
       </p>
       <p>
-        Manual fallback: add the skill folder from
-        <code>skills/copilot-app-first-steps/</code> to the app-supported skills location,
-        open the Copilot app, then type <code>start app tutorial</code>.
+        Technical helper note: the app does not currently document a universal
+        one-click skill install URL. When one exists, update
+        <code>COPILOT_APP_SKILL_INSTALL_URL</code> in this file.
       </p>
     </details>
   </main>
